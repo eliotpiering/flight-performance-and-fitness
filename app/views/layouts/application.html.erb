@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <%= csrf_meta_tags %>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <title>Flight Performance and Fitness</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+
+        <% if content_for?(:head) %>
+        <%= yield(:head) %>
+        <% end %>
+
+
+        <!-- <link href="style.css" rel="stylesheet" type="text/css"/> -->
+
+        <!-- <link rel="stylesheet" type="text/css" href="slick.css"/> -->
+        <!-- <link rel="stylesheet" type="text/css" href="slick-theme.css"/> -->
+
+        <!-- <script type="text/javascript" src="jquery-3.2.1.min.js"></script> -->
+        <!-- <script type="text/javascript" src="slick.min.js"></script> -->
+        <!-- <script src="image-slider.js" type="text/javascript"></script> -->
+    </head>
+
+    <body>
+        <section id="header" class="white-font bg-inverse"> <!-- Header -->
+            <nav class="container-fluid navbar navbar-toggleable-sm navbar-expand-md navbar-inverse bg-inverse">
+                <div class="container">
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href= "<%= root_path %>" >
+                        <img src="<%= image_path 'logo_blue.png' %>" alt="flight-performance-and-fitness" height="50"/>
+                    </a>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <%= nav_link "Home", root_path %>
+                            <%= nav_link "Services", services_path %>
+                            <%= nav_link "About", about_path %>
+                            <%= nav_link "Contact", contact_path %>
+                            <%= nav_link "Testimonials", testimonials_path %>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <section id="main">
+            <%= yield %>
+        </section>
+        <section id="footer-image" class="container-fluid"> <!-- Footer -->
+            <div class="row pt-5">
+                <div class="col text-center text-white font-weight-bold">
+                    <p>
+                        © 2017 FLIGHT PREFORMANCE & FITNESS
+                        <br/>
+                        225 Riverview Ave.
+                        Newton, MA 02466
+                        508-737-2165
+                    </p>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
