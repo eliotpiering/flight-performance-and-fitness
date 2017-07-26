@@ -1,47 +1,68 @@
-<div id="testimonial" class="centered-content">
-    <h1>Testimonials</h1>
-    <div class="testimonial-item">
-        <img src ="assets/kim-harris.jpg" alt="Margaret Ames"/>
-        <p><b>Margaret Ames</b><br>
-            Flight has had a huge impact on my fitness in such a short amount of time. The small group classes have a great environment with everyone pushing each other to do their best. The trainers care about you as a client but also as a person, they take the time to get to know you and invest in your well-being. The sense of community is what encourages me to go each day and I cannot thank the flight fam enough for making me an all around stronger individual.
-        </p>
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <h1 class="pb-3 pt-3">Testimonials</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-xs-12">
+            <img class="img-fluid" src ="<%= asset_path('margaret-ames.jpg') %>" alt="Margaret Ames"/>
+        </div>
+        <div class="col-sm-8 col-xs-12">
+            <p><b>Margaret Ames</b><br>
+                Flight has had a huge impact on my fitness in such a short amount of time. The small group classes have a great environment with everyone pushing each other to do their best. The trainers care about you as a client but also as a person, they take the time to get to know you and invest in your well-being. The sense of community is what encourages me to go each day and I cannot thank the flight fam enough for making me an all around stronger individual.
+            </p>
+        </div>
     </div>
     <hr>
-    <div class="testimonial-item">
-        <!-- TODO these images are labelled backwards! -->
-        <img src ="assets/margaret-ames.png" alt="Kim Harris"/>
-        <p><b>Kim Harris</b><br>
+    <div class="row">
+        <div class="col-sm-8 col-xs-12">
+            <p><b>Kim Harris</b><br>
             I have been a member of Flight Performance and Fitness since they opened in August.  The group training classes are something that I was apprehensive about since I have had a personal trainer for many years.  The group training is so much more motivational as it is like having a personal trainer EVERY DAY!  The groups are small enough that you feel you are getting personalized attention and they are always watching your form to prevent injury.  The classes motivate me to increase my weights and challenge my cardiovascular levels.  Jared and Dylan are amazing trainers and they can easily assess my fitness goals and how to push me during each hour.  My husband who hates the regular gym absolutely thrives with this format of training and it is something that we can do together.  Try Flight – you will not be disappointed!
-        </p>
+                </p>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <img class="img-fluid" src ="<%= asset_path('kim-harris.png') %>" alt="Kim Harris"/>
+                </div>
     </div>
-    <hr>
-    <div class="testimonial-item">
-        <img src ="assets/headshot.png" alt="Allisun Kovach"/>
-        <p><b>Alisun Kovach</b><br>
-            The heart of what makes Flight unlike any other gym in the area is the sense of 
-            community and the feeling that your presences is valued every time you walk 
-            though the door. This instills an innate accountability that not only helps you commit
-            to showing up for a 5:30am class, but also helps motivate you to push yourself to 
-            truly do your best.</p>
-        <p>
-            It goes without saying the pulse behind this comes directly from the owners. Dylan 
-            and Jared get know each and every one of their clients; they work with you to 
-            accommodate any limitations or injuries you have and push you to better than you 
-            thought you could. There’s zero intimidation factor in this community, it doesn’t 
-            matter your age or skill set, they’re able to adjust the program to fit your needs. 
-            From group classes to personal training, I have never left Flight feeling like I didn’t 
-            get a great workout. I leave each morning feeling challenged, accomplished, and 
-            happy to be a member of  “The Flight Fam.”
-        </p>
-    </div>
-    <hr>
-    <div class="testimonial-item">
-        <img src="assets/maureen-mcinerney.png" alt="Maureen McInerney"/>
-        <p><b>Maureen McInerney</b><br>
-            I went through college playing an extremely physical sport without ever touching a weight rack or having a strength coach. I was never close to reaching my full potential, I neglected my body, and never recovered properly from injuries. Five months ago, out of fear of my new teammates kicking my ass, I decided to join a gym. It's proved to be one of the most rewarding experiences of my life - changing the way I think and feel. My coaches have become my friends and are some of the most patient, supportive people I have ever met. 
 
-            If you're serious about lifting, this is the place to go. If you're terrified of lifting and are going to trip on your first day, this is the place to go.
-        </p>
+    <hr>
+    <div class="row">
+        <div class="col-sm-4 col-xs-12">
+            <img class="img-fluid" src ="<%= asset_path('allisun-kovach.jpg') %>" alt="Allisun Kovach"/>
+        </div>
+        
+        <div class="col-sm-8 col-xs-12">
+            <p><b>Alisun Kovach</b><br>
+                The heart of what makes Flight unlike any other gym in the area is the sense of 
+                community and the feeling that your presences is valued every time you walk 
+                though the door. This instills an innate accountability that not only helps you commit
+                to showing up for a 5:30am class, but also helps motivate you to push yourself to 
+                truly do your best.</p>
+            <p>
+                It goes without saying the pulse behind this comes directly from the owners. Dylan 
+                and Jared get know each and every one of their clients; they work with you to 
+                accommodate any limitations or injuries you have and push you to better than you 
+                thought you could. There’s zero intimidation factor in this community, it doesn’t 
+                matter your age or skill set, they’re able to adjust the program to fit your needs. 
+                From group classes to personal training, I have never left Flight feeling like I didn’t 
+                get a great workout. I leave each morning feeling challenged, accomplished, and 
+                happy to be a member of  “The Flight Fam.”
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-8 col-xs-12">
+            <p><b>Maureen McInerney</b><br>
+                I went through college playing an extremely physical sport without ever touching a weight rack or having a strength coach. I was never close to reaching my full potential, I neglected my body, and never recovered properly from injuries. Five months ago, out of fear of my new teammates kicking my ass, I decided to join a gym. It's proved to be one of the most rewarding experiences of my life - changing the way I think and feel. My coaches have become my friends and are some of the most patient, supportive people I have ever met. 
+
+                If you're serious about lifting, this is the place to go. If you're terrified of lifting and are going to trip on your first day, this is the place to go.
+            </p>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+            <img class="img-fluid" src="<%= asset_path('maureen-mcinerney.png') %>" alt="Maureen McInerney"/>
+        </div>
     </div>
     <hr>
 </div>
