@@ -2,7 +2,7 @@
 lock "3.8.2"
 
 set :application, "FlightPerformanceAndFitness"
-set :repo_url, "git@example.com:eliotpiering/flight-performance-and-fitness-website.git"
+set :repo_url, "git@example.com:eliotpiering/flight-performance-and-fitness.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

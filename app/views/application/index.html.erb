@@ -7,11 +7,11 @@
     <div class="row">
         <div class="col-10 offset-1">
             <div id="image-slider">
-                <img src="assets/header-image-1.jpg" alt="lateral jumps"/>
-                <img src="assets/header-image-2.jpg" alt="one arm pull" />
-                <img src="assets/header-image-3.jpg" alt="squats"/>
-                <img src="assets/header-image-4.jpg" alt="side plank" />
-                <img src="assets/header-image-5.jpg" alt="floor bench" />
+                <img src="<%= asset_path('header-image-1.jpg') %>" alt="lateral jumps"/>
+                <img src="<%= asset_path('header-image-2.jpg') %>" alt="one arm pull" />
+                <img src="<%= asset_path('header-image-3.jpg') %>" alt="squats"/>
+                <img src="<%= asset_path('header-image-4.jpg') %>" alt="side plank" />
+                <img src="<%= asset_path('header-image-5.jpg') %>" alt="floor bench" />
             </div>
         </div>
     </div>
@@ -48,12 +48,10 @@
             <h3>See More</h3>
         </div>
     </div>
-    <div class="row">
-        <div id="video-player-container" class="col-8 offset-2">
-            <iframe id="video-player" src="https://www.youtube.com/embed/lvglpS3I2RM" frameborder="0" allowfullscreen></iframe>
-            <%# TODO videojs instead of youtube %>
-            <%#= videojs_rails sources: { mp4: asset_path(', webm: "http://another.com/path/to/video.webm"}, setup: "{}", controls: false, width:"400" %>
-        </div>
+    <div id="video-player-container" class="row">
+        <iframe id="video-player" class="col-8 offset-2" src="https://www.youtube.com/embed/lvglpS3I2RM" frameborder="0" allowfullscreen></iframe>
+        <%# TODO videojs instead of youtube %>
+        <%#= videojs_rails sources: { mp4: asset_path(', webm: "http://another.com/path/to/video.webm"}, setup: "{}", controls: false, width:"400" %>
     </div>
     <div class="row">
         <hr/>
