@@ -35,6 +35,7 @@ gem 'jquery-rails'
 gem "jquery-slick-rails"
 
 gem "font-awesome-rails"
+gem "popper_js"
 
 
 group :development, :test do
