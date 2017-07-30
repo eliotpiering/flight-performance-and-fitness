@@ -14,6 +14,7 @@
 //= require jquery
 //= require turbolinks
 //= require jquery.slick
+//= require bootstrap-sprockets
 //= require_tree .
 
 // $(window).on('page:restore', function(e) {

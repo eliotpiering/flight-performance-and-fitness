@@ -8,6 +8,7 @@ $btn-font-weight: 800;
 
 @import "bootstrap";
 @import "slick/*";
+@import "font-awesome";
 /* @import 'slick-theme'; */
 /* @import 'video-js'; */
 
@@ -42,7 +43,7 @@ $btn-font-weight: 800;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 100%;
+    /* width: 100%; */
     height: 20rem;
 }
 
@@ -63,4 +64,23 @@ $btn-font-weight: 800;
 
 #google-map {
     height: 35rem;
+}
+
+.social-icons a {
+    padding-right: 8px;
+}
+.social-icons i {
+    color: black;
+}
+
+.header-information:hover {
+    text-decoration: underline;
+}
+@include media-breakpoint-down(sm) {
+    .hide-when-small {
+        display: none;
+    }
+    .social-icons {
+        text-align:right;
+    }
 }

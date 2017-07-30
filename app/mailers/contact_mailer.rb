@@ -4,6 +4,6 @@ class ContactMailer < ApplicationMailer
     @name = contact_params[:name]
     @email = contact_params[:email]
     @message = contact_params[:message]
-    mail(from: @email, to: 'dgutheil22@gmail.com', subject: 'Someone reached out')
+    mail(from: @email, to: 'flightperformanceandfitness@gmail.com', subject: 'Someone reached out')
   end
 end
