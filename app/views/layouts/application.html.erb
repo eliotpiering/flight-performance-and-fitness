@@ -9,18 +9,14 @@
 
         <title>Flight Performance and Fitness</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-
-
         <% if content_for?(:head) %>
             <%= yield(:head) %>
         <% end %>
     </head>
 
     <body>
-        <section id="header" class="white-font bg-inverse"> <!-- Header -->
-            <div class="conainer-fluid">
-                <div class="row bg-primary text-center align-items-center pb-2 pt-2 font-weight-bold">
+        <section id="header" class="container-fluid white-font bg-inverse"> <!-- Header -->
+                <div class="row bg-primary text-center align-items-center pb-2 pt-2">
                     <div class="col header-information hide-when-small">
                         <span>Phone: 508-737-2165</span>
                     </div>
@@ -31,9 +27,12 @@
                         <a href='https://www.yelp.com/biz/flight-performance-and-fitness-newton' target="_blank"> <%= fa_icon 'yelp' %></a>
                         <a href='https://www.facebook.com/flightperformance/' target="_blank"> <%= fa_icon 'facebook-official' %></a>
                         <a href='https://www.instagram.com/flight_performance/' target="_blank"> <%= fa_icon 'instagram' %></a>
+                        <a href='https://itunes.apple.com/app/id1096670541' class="text-white" target="_blank"><%= fa_icon 'mobile' %></a>
+                        <a href='https://play.google.com/store/apps/details?id=com.fitnessmobileapps.flightperformanceandfitness&hl=en' class="text-white" target="_blank"><%= fa_icon 'android' %></a>
+
+
                     </div>
                 </div>
-            </div>
             <nav class="container-fluid navbar navbar-toggleable-md navbar-expand-lg navbar-inverse bg-inverse">
                 <div class="container">
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +44,6 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                         <ul class="navbar-nav">
                             <%= nav_link "Home", root_path %>
-                            <%= nav_link "Home-alt", index_color_path %>
                             <%= nav_link "Services", services_path %>
                             <%= nav_link "About", about_path %>
                             <%= nav_link "Contact", contact_path %>
@@ -64,18 +62,12 @@
             <div class="row">
                 <div class="col text-center text-white lead">
                     <p class="mt-2 mb-2">
-                        Download our app &nbsp <a href="https://itunes.apple.com/app/id1096670541" class="text-white" target="_blank"><%= fa_icon 'mobile' %></a> &nbsp <a href="https://play.google.com/store/apps/details?id=com.fitnessmobileapps.flightperformanceandfitness&hl=en" class="text-white" target="_blank"><%= fa_icon 'android' %></a>
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col text-center text-white lead">
-                    <hr>
-                    <p class="mt-2 mb-2">
+                        <span class="font-weight-bold"> Download our app &nbsp <a href="https://itunes.apple.com/app/id1096670541" class="text-white" target="_blank"><%= fa_icon 'mobile' %></a> &nbsp <a href="https://play.google.com/store/apps/details?id=com.fitnessmobileapps.flightperformanceandfitness&hl=en" class="text-white" target="_blank"><%= fa_icon 'android' %></a><br/></span>
+
                         © 2017 FLIGHT PREFORMANCE & FITNESS
                         <br/>
                         225 Riverview Ave.
-                        Newton, MA 02466
+                        Newton, MA 02466 <br/>
                         508-737-2165
                     </p>
                 </div>
