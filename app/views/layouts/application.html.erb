@@ -17,21 +17,23 @@
     <body>
         <section id="header" class="container-fluid white-font bg-inverse"> <!-- Header -->
                 <div class="row bg-primary text-center align-items-center pb-2 pt-2">
-                    <div class="col header-information hide-when-small">
-                        <span>Phone: 508-737-2165</span>
+                    <div class="col-xs-6 col-sm-4 header-information">
+                        <span>Phone: <a href="tel:508-737-2165">508-737-2165</a></span>
                     </div>
-                    <div class="col header-information">
-                        <span> 225 Riverview Ave. Newton, MA 02466</span>
+
+                    <div class="col-xs-6 col-sm-4 header-information">
+                        <span><a target="_blank" href="https://www.google.com/maps/place/Flight+Performance+%26+Fitness/@42.357762,-71.246363,17z/data=!3m1!4b1!4m5!3m4!1s0x89e3831cf5821a0b:0xe4bb6d1ea6d54418!8m2!3d42.357762!4d-71.244169">225 Riverview Ave. Newton, MA 02466</span></a>
+
                     </div>
-                    <div class="col social-icons">
+
+                    <div class="col-xs-6 col-sm-4 social-icons">
                         <a href='https://www.yelp.com/biz/flight-performance-and-fitness-newton' target="_blank"> <%= fa_icon 'yelp' %></a>
                         <a href='https://www.facebook.com/flightperformance/' target="_blank"> <%= fa_icon 'facebook-official' %></a>
                         <a href='https://www.instagram.com/flight_performance/' target="_blank"> <%= fa_icon 'instagram' %></a>
                         <a href='https://itunes.apple.com/app/id1096670541' class="text-white" target="_blank"><%= fa_icon 'mobile' %></a>
                         <a href='https://play.google.com/store/apps/details?id=com.fitnessmobileapps.flightperformanceandfitness&hl=en' class="text-white" target="_blank"><%= fa_icon 'android' %></a>
-
-
                     </div>
+
                 </div>
             <nav class="container-fluid navbar navbar-toggleable-md navbar-expand-lg navbar-inverse bg-inverse">
                 <div class="container">
@@ -39,7 +41,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <a class="navbar-brand" href= "<%= root_path %>" >
-                        <img src="<%= image_path 'logo_blue.png' %>" alt="flight-performance-and-fitness" height="50"/>
+                        <img src="<%= image_path 'logo_blue.png' %>" alt="flight-performance-and-fitness" height="42"/>
                     </a>
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                         <ul class="navbar-nav">

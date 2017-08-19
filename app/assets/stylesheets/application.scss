@@ -76,14 +76,14 @@ $btn-font-weight: 800;
 .header-information:hover {
     text-decoration: underline;
 }
-@include media-breakpoint-down(sm) {
-    .hide-when-small {
-        display: none;
-    }
-    .social-icons {
-        text-align:right;
-    }
-}
+/* @include media-breakpoint-down(sm) { */
+/*     .hide-when-small { */
+/*         display: none; */
+/*     } */
+/*     .social-icons { */
+/*         text-align:right; */
+/*     } */
+/* } */
 
 @include media-breakpoint-down(xs) {
 
@@ -92,3 +92,8 @@ $btn-font-weight: 800;
     }
 
 }
+
+.header-information a {
+    color: black;
+}
+
