@@ -31,7 +31,14 @@ document.addEventListener("turbolinks:load", function() {
             mobileFirst: true
             // adaptiveHeight: true
         });
+
+        var andoridLink = 'https://itunes.apple.com/app/id1096670541';
+        var iOSLink = 'https://play.google.com/store/apps/details?id=com.fitnessmobileapps.flightperformanceandfitness&hl=en';
+        if (/Android/i.test(navigator.userAgent)) {
+            $("a.flight-app-link").attr("href", andoridLink)
+        } else {
+            $("a.flight-app-link").attr("href", andoridLink)
+        }
     });
+
 })
-
-
