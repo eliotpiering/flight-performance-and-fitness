@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get 'contact', to: 'application#contact'
   post 'contact', to: 'application#submit_contact'
   get 'testimonials', to: 'application#testimonials'
+  get 'events', to: 'application#events'
 end
