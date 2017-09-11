@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
     ContactMailer.contact_email(contact_params).deliver_now
   end
 
+  def events
+    @upcoming_events = Event.where("event_date >= ?", Date.today)
+  end
+
   private
 
   def contact_params

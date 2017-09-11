@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   post 'contact', to: 'application#submit_contact'
   get 'testimonials', to: 'application#testimonials'
   get 'events', to: 'application#events'
+
+  post 'charges/:event_id', to: 'charges#create', as: 'charges'
 end

@@ -5,16 +5,44 @@
         </div>
     </div>
 
-    <div class="row mb-5">
-        <div class="col">
-            <h3>Avoiding Training Pitfalls in the Year Round Athlete</h3>
-            <p><b>When:</b> Nov 18 - 19, 2017 at 8:00am - 5:00pm EST</p>
-            <p><b>Where:</b> Flight Performance & Fitness, 225 Riverview Ave, Aburdale, MA 02446</p>
-            <p><b>Bio: </b>Pat Davidson has accumulated a wealth of knowledge in the last ten years. Pat studied for his masters in Strength & Conditioning under Dr Ellyn Robinson at Bridgewater State College before completing his Phd in Exercise Physiology at Springfield College. Pat went on to be a professor in exercise science at Springfield and Brooklyn College. As an athlete Pat has competed in two world championships in strongman at the Arnold Classic, and high levels of submission wrestling and MMA fighting. Pat is one of the most competitive, fierce, and brilliant people in the field of strength and conditioning and his strive for knowledge dominance is contagious.</p>
-            <%= button_tag "Register Now", class: 'btn btn-primary' %>
+    <% if @upcoming_events.blank? %>
+        <div class="text-center row mb-5">
+            <div class="col">
+                <p>We don't have any events scheduled at the moment.  Stay up to date on our <a href='https://www.facebook.com/flightperformance/' target="_blank">Facebook</a> or <a href='https://www.instagram.com/flight_performance/' target="_blank"> Instagram</a> pages.</p>
+                <p>We'll also be sure to let you know about any events in person at Flight.</p>
+            </div>
         </div>
-        <div class="col">
-            <%= image_tag 'pat-davidson.jpg', alt: 'pat-davidson', class: 'img-fluid' %>
-        </div>
-    </div>
+    <% else %>
+        <% @upcoming_events.each do |event| %>
+            <div class="row mb-5">
+                <div class="col">
+                    <h3><%= event.title %></h3>
+                    <p><b>When:</b> <%= event.human_readable_date %></p>
+                    <p><b>Where:</b> <%= event.location %></p>
+                    <p><b>Description: </b><%= event.description %></p>
+                    <p><b>Cost: </b> <%= number_to_currency(event.amount/ 100.to_f) %></p>
+                    <p class="pt-2 pb-2"><b>Open Spots:</b> <span id="event-#<%=event.id%>-open-spots"><%= event.open_spots %></span></p>
+                    <%= form_with url: charges_path(event.id) do %>
+                        <input
+                            type="submit"
+                            value="Register Now"
+                            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                            data-amount="<%= event.amount %>"
+                            data-currency="usd"
+                            data-name="Flight Performance And Fitness"
+                            data-description="<%= number_to_currency(event.amount / 100.to_f) %> - for <%= event.title %>"
+                            class="btn btn-primary"
+                            id="stripe-submit-button"
+                        />
+
+                        <script src="https://checkout.stripe.com/v2/checkout.js"></script>
+                    <% end %>
+                    <p><small>Don't worry we use stripe to securely process our payments</small></p>
+                </div>
+                <div class="col">
+                    <%= image_tag event.photo_url, alt: event.title, class: 'img-fluid' %>
+                </div>
+            </div>
+        <% end %>
+    <% end %>
 </div>

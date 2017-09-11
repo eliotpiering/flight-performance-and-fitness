@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+      <p>Hi,</p>
+      <p>We received your payment of <%= number_to_currency(@event.amount / 100) %> for <%= @event.title %>.</p>
+      <p>We'll see you there,</p>
+      <p>The Flight Performance and Fitness Team.</p>
+  </body>
+</html>
