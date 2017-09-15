@@ -46,7 +46,9 @@ document.addEventListener("turbolinks:load", function() {
                 $form = $button.parents('form');
             var opts = $.extend({}, $button.data(), {
                 token: function(result) {
-                    $form.append($('<input>').attr({ type: 'hidden', name: 'stripeToken', value: result.id })).submit();
+                    $form.append($('<input>').attr({ type: 'hidden', name: 'stripeToken', value: result.id }))
+                    $form.append($('<input>').attr({ type: 'hidden', name: 'stripeEmail', value: result.email }))
+                    $form.submit();
                 }
             });
             StripeCheckout.open(opts);

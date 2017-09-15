@@ -19,7 +19,6 @@ class ChargesController < ApplicationController
       :currency    => 'usd'
     )
 
-
     event_registration = EventRegistration.create!(event: @event, email: params[:stripeEmail])
 
     EventMailer.thanks_for_registering_for(event_registration).deliver_now
