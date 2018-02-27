@@ -1,42 +1,81 @@
-<div class="container-fluid">
+<div class="container mt-5 mb-5" id="contact-form-container">
+
     <div class="row mt-5 mb-5">
         <div class="col text-center">
             <h1>Contact</h1>
         </div>
     </div>
+    <div class="row">
+      <div class="col-md-8 col-xs-12">
+        <img class="img-fluid" src="<%= asset_path("team-training.jpg")%>" />
+      </div>
+      <div class="col-md-4 col-xs-12">
+        <div class="row">
+          <div class="col">
+            <hr/> 
+            <!-- <h5>Phone </h5> -->
+            <p><i class="fa fa-phone"></i>  508-737-2165</p>
+            <!-- <h5>Email</h5> -->
+            <p><i class="fa fa-envelope"></i>  flightperformanceandfitness@gmail.com</p>
+            <!-- <h5>Location</h5> -->
+            <p><i class="fa fa-location-arrow"></i>  225 Riverview Ave. Newton, MA 02466</p>
+            <!-- <h5>Hours</h5> -->
+            <p><b>Monday-Friday</b></p>
+            <p>5:30 AM - 8:30 PM</p>
+            <p><b>Saturday</b></p>
+            <p>7:00 AM - 12:00 PM</p>
+            <hr/> 
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col text-center">
+          <h5>Send us a Message</h5>
+          <hr/> 
+          </div>
+        </div>
+        <%= form_for :contact, method: :post, remote: true do |f| %>
+            <div class="row">
+                <div class="col form-group">
+                    <label for="name-input">Name</label>
+                    <%= f.text_field :name, class: 'form-control', id: 'name-input', placeholder: 'Your Name', required: true %>
+                </div>
+                <div class="col form-group">
+                    <label for="email-input">Email</label>
+                    <%= f.text_field :email, class: 'form-control', id: 'email-input', placeholder: 'Your Email', required: true %>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="message-input">Message</label>
+                    <%= f.text_area :message, class: 'form-control', id: 'message-input', placeholder: 'Your Message', required: true, rows: 7, cols: 70 %>
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="col">
+                    <%= f.submit "Contact", class: 'btn btn-primary' %>
+                </div>
+            </div>
+        <% end %>
+      </div>
+   </div>
+</div>
+
+<div class="container">
+
     <div class="row" id="google-map">
         <!-- <div class="col"> -->
         <iframe
             height="100%"
             width="100%"
             frameborder="0" style="border:0"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAwyOda8bwTONjidQwaqQ7d-3v8laA0d04&q=Flight+Perfomance+and+Fitness"
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.2849615548703!2d-71.2463576849947!3d42.35776594323982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3831cf5821a0b%3A0xe4bb6d1ea6d54418!2sFlight+Performance+%26+Fitness!5e0!3m2!1sen!2sus!4v1519629951916"
         ></iframe>
         <!-- </div> -->
     </div>
-</div>
-<div class="container mt-5 mb-5" id="contact-form-container">
-    <%= form_for :contact, method: :post, remote: true do |f| %>
-        <div class="row">
-            <div class="col form-group">
-                <label for="name-input">Name</label>
-                <%= f.text_field :name, class: 'form-control', id: 'name-input', placeholder: 'Your Name', required: true %>
-            </div>
-            <div class="col form-group">
-                <label for="email-input">Email</label>
-                <%= f.text_field :email, class: 'form-control', id: 'email-input', placeholder: 'Your Email', required: true %>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <label for="message-input">Message</label>
-                <%= f.text_area :message, class: 'form-control', id: 'message-input', placeholder: 'Your Message', required: true, rows: 7, cols: 70 %>
-            </div>
-        </div>
-        <div class="row pt-4">
-            <div class="col">
-                <%= f.submit "Contact", class: 'btn btn-primary' %>
-            </div>
-        </div>
-    <% end %>
+    <div class="row">
+      <hr/>
+    </div>
+    <div class="row">
+      <hr/>
+    </div>
 </div>

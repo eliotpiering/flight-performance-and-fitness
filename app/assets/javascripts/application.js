@@ -32,12 +32,12 @@ document.addEventListener("turbolinks:load", function() {
             // adaptiveHeight: true
         });
 
-        var andoridLink = 'https://itunes.apple.com/app/id1096670541';
-        var iOSLink = 'https://play.google.com/store/apps/details?id=com.fitnessmobileapps.flightperformanceandfitness&hl=en';
+        var iOSLink = 'https://itunes.apple.com/app/id1096670541';
+        var androidLink = 'https://play.google.com/store/apps/details?id=com.fitnessmobileapps.flightperformanceandfitness&hl=en';
         if (/Android/i.test(navigator.userAgent)) {
-            $("a.flight-app-link").attr("href", andoridLink)
+            $("a.flight-app-link").attr("href", androidLink)
         } else {
-            $("a.flight-app-link").attr("href", andoridLink)
+            $("a.flight-app-link").attr("href", iOSLink)
         }
 
         $('#stripe-submit-button').on('click', function(event) {

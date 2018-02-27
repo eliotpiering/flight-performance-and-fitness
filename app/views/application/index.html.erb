@@ -26,8 +26,8 @@
 
 <div id="slogan" class="bg-inverse">
     <h4 class="text-white">When it comes to eating right and exercising there is no tomorrow</h4>
-    <p class="text-white lead">Tomorrow  becomes a lifetime faster then you can imagine</p>
-    <a href="<%= services_path %>"class="btn btn-primary">Start Today</a>
+    <p class="text-white lead">Tomorrow  becomes a lifetime faster than you can imagine</p>
+    <a href="https://flightperformanceandfitness.sites.zenplanner.com/freeTrial.cfm"class="btn btn-primary">Start Today</a>
 </div>
 
 
@@ -60,8 +60,27 @@
         <%# TODO videojs instead of youtube %>
         <%#= videojs_rails sources: { mp4: asset_path(', webm: "http://another.com/path/to/video.webm"}, setup: "{}", controls: false, width:"400" %>
     </div>
-    <div class="row">
-        <hr/>
+    <div class="row mt-5 pt-1" >
+      <div class="col text-center text-white">
+          <h2>Flight Merchandise</h2>
+          <a target="_blank" class="font-weight-bold" href="https://teamlocker.squadlocker.com/#/lockers/flight-performance" ><b>Visit our online store</b></a>
+      </div>
+    </div>
+    <div class="row" >
+        <div class="col p-3 m-3">
+          <a href="https://teamlocker.squadlocker.com/#/lockers/flight-performance/styles/8071138" target="_blank" class="hover-opacity">
+            <img src="<%= asset_path('store-long-rugby.png') %>" class="img-fluid"/>
+          </a>
+        </div>
+        <div class="col p-3 m-3">
+          <a href="https://teamlocker.squadlocker.com/#/lockers/flight-performance/styles/8071136" target="_blank" class="hover-opacity">
+            <img src="<%= asset_path('store-blue-sweat.png') %>" class="img-fluid"/>
+        </div>
+        <div class="col p-3 m-3">
+          <a href="https://teamlocker.squadlocker.com/#/lockers/flight-performance/styles/8071137" target="_blank" class="hover-opacity">
+            <img src="<%= asset_path('store-white-hat.png') %>" class="img-fluid"/>
+          </a>
+        </div>
     </div>
     <div class="row">
       <hr/>
