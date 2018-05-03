@@ -53,8 +53,5 @@ document.addEventListener("turbolinks:load", function() {
             });
             StripeCheckout.open(opts);
         });
-
-
     });
-
 })

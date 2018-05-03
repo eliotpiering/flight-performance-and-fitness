@@ -57,7 +57,7 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                         <ul class="navbar-nav">
                           <%= nav_link "Home", root_path %>
-                          <%= nav_link "Contact", contact_path %>
+                          <%= nav_link "Contact", contact_path, {data: {turbolinks: false}}  %>
                           <%= nav_link "Services", services_path %>
                           <%= nav_link "About", about_path %>
                           <%= nav_link "Testimonials", testimonials_path %>

@@ -102,3 +102,14 @@ $btn-font-weight: 800;
 .hover-opacity:hover {
   opacity: 0.6;
 }
+
+.mind-body-contact-wrapper {
+  @extend .form-group
+}
+.mind-body-contact-wrapper input,  .mind-body-contact-wrapper textarea {
+  @extend .form-control
+}
+.mind-body-contact-wrapper input.submit  {
+  @extend .btn-primary, .btn
+}
+
