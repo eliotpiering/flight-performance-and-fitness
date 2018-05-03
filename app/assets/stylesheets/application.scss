@@ -103,13 +103,14 @@ $btn-font-weight: 800;
   opacity: 0.6;
 }
 
-.mind-body-contact-wrapper {
-  @extend .form-group
+.mind-body-form-wrapper {
+  @extend .form-group;
 }
-.mind-body-contact-wrapper input,  .mind-body-contact-wrapper textarea {
-  @extend .form-control
+.mind-body-form-wrapper input,  .mind-body-form-wrapper textarea {
+  @extend .form-control;
+  margin-bottom: 5px;
 }
-.mind-body-contact-wrapper input.submit  {
-  @extend .btn-primary, .btn
+.mind-body-form-wrapper input.submit  {
+  @extend .btn-primary, .btn;
 }
 
