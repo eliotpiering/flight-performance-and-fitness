@@ -61,14 +61,21 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "PersonalWebsite_#{Rails.env}"
   config.action_mailer.perform_caching = false
-  config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
-    port:                 587,
-    domain:               'flightperformanceandfitness.com',
-    user_name:            "#{ENV['EMAIL_USERNAME']}",
-    password:             "#{ENV['EMAIL_PASSWORD']}",
-    authentication:       'plain',
-    enable_starttls_auto: true  }
+
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+    api_key: "#{ENV['MAILGUNN_API_KEY']}",
+    domain: 'emails.flightperformanceandfitness.com'
+  }
+
+  # config.action_mailer.smtp_settings = {
+  #   address:              'smtp.gmail.com',
+  #   port:                 587,
+  #   domain:               'flightperformanceandfitness.com',
+  #   user_name:            "#{ENV['EMAIL_USERNAME']}",
+  #   password:             "#{ENV['EMAIL_PASSWORD']}",
+  #   authentication:       'plain',
+  #   enable_starttls_auto: true  }
 
 
   # Ignore bad email addresses and do not raise email delivery errors.
