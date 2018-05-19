@@ -1,3 +1,3 @@
-var contactForm = $("#contact-form-container");
+var registerForm = $("#register-form");
 
-contactForm.html("<div class='container'><div class='row'><div class='col text-center'><p>Thanks for reaching out! You should hear back from us shortly.</p></div></div></div>")
+registerForm.html("<div class='container'><div class='row'><div class='col text-center'><p>Thanks. We'll be getting back to you soon.</p></div></div></div>")

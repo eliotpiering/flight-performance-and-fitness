@@ -55,14 +55,16 @@
                         <img src="<%= image_path 'logo_blue.png' %>" alt="flight-performance-and-fitness" height="42"/>
                     </a>
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                        <a class="navbar-brand" href="#"></a>
                         <ul class="navbar-nav">
                           <%= nav_link "Home", root_path %>
-                          <%= nav_link "Contact", contact_path, {data: {turbolinks: false}}  %>
+                          <%= nav_link "Contact", contact_path  %>
                           <%= nav_link "Services", services_path %>
                           <%= nav_link "About", about_path %>
                           <%= nav_link "Testimonials", testimonials_path %>
                           <%#= nav_link "Events", events_path %>
-                          <%= nav_link "Schedule", calendar_path, {data: {turbolinks: false}} %>
+                          <%= nav_link "Evaluation", register_path %>
+                          <%= nav_link "Schedule", calendar_path %>
                           <%= nav_link "Store", "https://teamlocker.squadlocker.com/#/lockers/flight-performance" %>
                         </ul>
                     </div>
