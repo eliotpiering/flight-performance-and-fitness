@@ -3,14 +3,15 @@ Rails.application.routes.draw do
   root to: 'application#index'
 
   get 'about', to: 'application#about'
+  get 'evaluation', to: 'application#evaluation'
   get 'services', to: 'application#services'
   get 'contact', to: 'application#contact'
   post 'contact', to: 'application#submit_contact'
   get 'testimonials', to: 'application#testimonials'
   get 'events', to: 'application#events'
   get 'calendar', to: 'application#calendar'
-  get 'register', to: 'application#register'
-  post 'register', to: 'application#submit_register'
+  get 'evaluation', to: 'application#evaluation'
+  post 'evaluation', to: 'application#submit_evaluation'
 
   post 'charges/:event_id', to: 'charges#create', as: 'charges'
 end

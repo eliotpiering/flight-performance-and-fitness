@@ -12,14 +12,14 @@ class ApplicationController < ActionController::Base
     @upcoming_events = Event.where("event_date >= ?", Date.today)
   end
 
-  def register
+  def evaluation
   end
 
   def calendar
     @schedule = Schedule.generate
   end
 
-  def submit_register
+  def submit_evaluations
     RegisterMailer.free_eval(register_params).deliver_now
   end
 
