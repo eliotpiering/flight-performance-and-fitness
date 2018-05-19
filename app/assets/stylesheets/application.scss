@@ -9,6 +9,7 @@ $btn-font-weight: 800;
 @import "bootstrap";
 @import "slick/*";
 @import "font-awesome";
+@import "tempusdominus-bootstrap-4";
 /* @import 'slick-theme'; */
 /* @import 'video-js'; */
 
@@ -112,5 +113,38 @@ $btn-font-weight: 800;
 }
 .mind-body-form-wrapper input.submit  {
   @extend .btn-primary, .btn;
+}
+
+
+
+/* Calendar */
+#day-list {
+    padding-left: 0px;
+    li {
+        list-style: none;
+        border-radius: 8px;
+        background-color: light-grey;
+        padding-left: 20px;
+        padding-right: 20px;
+        /* padding: 20px; */
+        color: $white;
+    }
+
+    .open-gym {
+        background-color: $brand-primary;
+    }
+    .personal-training {
+        background-color: $brand-warning;
+    }
+    .conditioning {
+        background-color: $brand-danger;
+    }
+    .boxing {
+        background-color: $brand-info;
+    }
+    .empty-event {
+        color: white; //rgba(0, 0, 0, 0.05);
+        background-color: white; //rgba(0, 0, 0, 0.05);
+    }
 }
 

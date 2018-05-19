@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'testimonials', to: 'application#testimonials'
   get 'events', to: 'application#events'
   get 'calendar', to: 'application#calendar'
+  get 'register', to: 'application#register'
+  post 'register', to: 'application#submit_register'
 
   post 'charges/:event_id', to: 'charges#create', as: 'charges'
 end

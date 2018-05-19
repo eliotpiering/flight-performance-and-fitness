@@ -12,6 +12,9 @@ module ApplicationHelper
     end
   end
 
+  def datetime_selector
+    "hello"
+  end
 
 
 end

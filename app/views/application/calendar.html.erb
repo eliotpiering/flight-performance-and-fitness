@@ -1,13 +1,30 @@
-<div class="container mt-5 mb-5" id="contact-form-container">
+<div class="container-fluid mt-5 mb-5" id="contact-form-container">
+    <div class="row mt-3 mb-3">
+        <div class="col">
+            <h2>Class Schedule</h2>
+            <p clsas="lead">Your first class is free, drop in anytime.</p>
+        </div>
+    </div>
     <div class="row">
-      <div class="offset-1 col-10">
-        <healcode-widget data-type="class_lists" data-widget-partner="object" data-widget-id="c2322963219" data-widget-version="0">
-          <div class="row text-center">
-            <div class="col">
-              <icon class="fa fa-3x fa-spinner fa-spin"></icon>
-            </div>
-          </div>
-        </healcode-widget>
+      <div class="col table-responsive">
+
+          <%= week_calendar events: @schedule do |date, events| %>
+              <ul id="day-list">
+                <% events.each do |event| %>
+                    <li class="event-item <%= event.class_name %>" data-duration="<%= event.duration %>" data-toggle="tooltip" data-placement="top" title="<%= event.description %>">
+                        <b><%= event.start_time.strftime("%l:%M %p") %> - <%= event.end_time.strftime("%l:%M %p") %>: </b>
+                        <%= event.name %>
+                    </li>
+                <% end %>
+              </ul>
+        <% end %>
+          <!-- <healcode-widget data-type="class_lists" data-widget-partner="object" data-widget-id="c2322963219" data-widget-version="0"> -->
+          <!-- <div class="row text-center"> -->
+          <!-- <div class="col"> -->
+          <!-- <icon class="fa fa-3x fa-spinner fa-spin"></icon> -->
+          <!-- </div> -->
+          <!-- </div> -->
+          <!-- </healcode-widget> -->
       </div>
     </div>
 </div>

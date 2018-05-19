@@ -39,6 +39,8 @@ gem "jquery-slick-rails"
 gem "font-awesome-rails"
 gem "popper_js"
 gem 'mailgun-ruby', '~>1.1.6'
+gem 'bootstrap4-datetime-picker-rails'
+gem 'momentjs-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -63,3 +65,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'stripe'
+gem "simple_calendar", "~> 2.0"

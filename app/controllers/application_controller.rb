@@ -12,7 +12,23 @@ class ApplicationController < ActionController::Base
     @upcoming_events = Event.where("event_date >= ?", Date.today)
   end
 
+  def register
+  end
+
+  def calendar
+    @schedule = Schedule.generate
+  end
+
+  def submit_register
+    RegisterMailer.free_eval(register_params).deliver_now
+  end
+
+
   private
+
+  def register_params
+    params.permit(:email, :message, times: {})
+  end
 
   def contact_params
     params.require(:contact).permit(:name, :email, :message)

@@ -15,7 +15,9 @@
 //= require turbolinks
 //= require jquery.slick
 //= require popper
+//= require moment
 //= require bootstrap-sprockets
+//= require tempusdominus-bootstrap-4
 //= require_tree .
 
 // $(window).on('page:restore', function(e) {
@@ -53,5 +55,8 @@ document.addEventListener("turbolinks:load", function() {
             });
             StripeCheckout.open(opts);
         });
+
+        $('[data-toggle="tooltip"]').tooltip()
+
     });
 })
