@@ -22,6 +22,7 @@ class ApplicationController < ActionController::Base
 
   def submit_evaluation
     RegisterMailer.free_eval(register_params).deliver_now
+    RegisterMailer.confirm(register_params).deliver_now
   end
 
 
