@@ -4,6 +4,7 @@ document.addEventListener("turbolinks:load", function() {
     $('.datetimepicker-input').datetimepicker({
         sideBySide: true,
         daysOfWeekDisabled: [0],
-        stepping: 15
+        stepping: 15,
+        useCurrent: false
     });
 });

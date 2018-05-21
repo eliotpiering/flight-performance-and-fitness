@@ -13,6 +13,10 @@ $btn-font-weight: 800;
 /* @import 'slick-theme'; */
 /* @import 'video-js'; */
 
+body {
+    font-family: 'Lato', sans-serif;
+}
+
 #slogan {
     position: static;
     padding: 25px;
@@ -134,13 +138,13 @@ $btn-font-weight: 800;
         background-color: $brand-primary;
     }
     .personal-training {
-        background-color: $brand-warning;
+        background-color: #005270; //$brand-warning;
     }
     .conditioning {
-        background-color: $brand-danger;
+        background-color: $text-muted;
     }
     .boxing {
-        background-color: $brand-info;
+        background-color: #0189BD; //$brand-info;
     }
     .empty-event {
         color: white; //rgba(0, 0, 0, 0.05);

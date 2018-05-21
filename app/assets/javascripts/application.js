@@ -29,8 +29,10 @@ document.addEventListener("turbolinks:load", function() {
     $(document).ready(function(){
         $("#image-slider").slick({
             dots: true,
-            speed: 500,
-            mobileFirst: true
+            speed: 1000,
+            mobileFirst: true,
+            autoplay: true,
+            autoplaySpeed: 2000
             // adaptiveHeight: true
         });
 

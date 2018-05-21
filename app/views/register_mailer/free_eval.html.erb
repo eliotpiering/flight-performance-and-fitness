@@ -4,12 +4,15 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-      <p><%= @email %> signed up for a free evaluation.</p>
+      <p><%= @name %> signed up for a free evaluation.</p>
+      <p>Email Address: <%= @email %></p>
       <p>Available Times:
           <% @times.each do |i, time| %>
             <p><%= time %></p>
           <% end %>
       </p>
-      <p>They said: <%= @message %></p>
+      <p>Fitness Goals: <%= @goals %></p>
+      <p>Previous Experience: <%= @experience %></p>
+      <p>Injury History: <%= @injury_history %></p>
   </body>
 </html>

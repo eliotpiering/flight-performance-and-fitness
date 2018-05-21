@@ -1,14 +1,13 @@
 <div class="container-fluid mt-5 mb-5" id="contact-form-container">
     <div class="row mt-3 mb-3">
-        <div class="col text-center">
-            <h2>Class Schedule</h2>
-            <p clsas="lead">Your first class is free, drop in anytime.</p>
+        <div class="col lead text-center">
+            <h1>Class Schedule</h1>
+            <p>Your first class is free, drop in anytime.</p>
         </div>
     </div>
     <div class="row">
       <div class="col table-responsive">
-
-          <%= week_calendar events: @schedule do |date, events| %>
+          <%= calendar number_of_days: 6, events: @schedule do |date, events| %>
               <ul id="day-list">
                 <% events.each do |event| %>
                     <li class="event-item <%= event.class_name %>" data-duration="<%= event.duration %>" data-toggle="tooltip" data-placement="top" title="<%= event.description %>">

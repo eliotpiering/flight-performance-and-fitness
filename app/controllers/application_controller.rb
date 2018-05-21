@@ -17,9 +17,10 @@ class ApplicationController < ActionController::Base
 
   def calendar
     @schedule = Schedule.generate
+    params[:start_date] = Schedule.start
   end
 
-  def submit_evaluations
+  def submit_evaluation
     RegisterMailer.free_eval(register_params).deliver_now
   end
 
@@ -27,7 +28,7 @@ class ApplicationController < ActionController::Base
   private
 
   def register_params
-    params.permit(:email, :message, times: {})
+    params.permit(:name, :email, :goals, :experience, :injury_history, times: {})
   end
 
   def contact_params
