@@ -11,8 +11,8 @@ class RegisterMailer < ApplicationMailer
   end
 
   def confirm(params)
+    email = params[:email]
     @name = params[:name]
-    @times = params[:times]
-    mail(from: 'flightperformanceandfitness@gmail.com', to: @email, subject: 'Flight Performance Free Evaluation')
+    mail(from: 'flightperformanceandfitness@gmail.com', to: email, subject: 'Flight Performance Free Evaluation')
   end
 end
