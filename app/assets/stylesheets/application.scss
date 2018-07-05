@@ -122,6 +122,22 @@ body {
 
 
 /* Calendar */
+/* .simple-calendar { */
+/*     background: image-url("blue-plank.jpg") no-repeat center center fixed; */
+/*     /\* background: url(images/bg.jpg)  *\/ */
+/*     -webkit-background-size: cover; */
+/*     -moz-background-size: cover; */
+/*     -o-background-size: cover; */
+/*     background-size: cover; */
+/* } */
+.legend {
+  
+    text-align: right;
+}
+.legend-item {
+    font-weight: bold;
+}
+
 #day-list {
     padding-left: 0px;
     li {
@@ -132,23 +148,33 @@ body {
         padding-right: 20px;
         /* padding: 20px; */
         color: $white;
-    }
-
-    .open-gym {
-        background-color: $brand-primary;
-    }
-    .personal-training {
-        background-color: #005270; //$brand-warning;
-    }
-    .conditioning {
-        background-color: $text-muted;
-    }
-    .boxing {
-        background-color: #0189BD; //$brand-info;
-    }
-    .empty-event {
-        color: white; //rgba(0, 0, 0, 0.05);
-        background-color: white; //rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
+.open-gym {
+    background-color: $brand-primary;
+}
+.personal-training {
+    background-color: #005270; //$brand-warning;
+}
+.conditioning {
+    background-color: $text-muted;
+}
+.boxing {
+    background-color: #0189BD; //$brand-info;
+}
+.empty {
+    color: white; //rgba(0, 0, 0, 0.05);
+    background-color: white; //rgba(0, 0, 0, 0.05);
+}
+.empty-event {
+    color: white; //rgba(0, 0, 0, 0.05);
+    background-color: white; //rgba(0, 0, 0, 0.05);
+}
+
+.legend {
+
+}
+
 

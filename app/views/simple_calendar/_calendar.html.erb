@@ -1,9 +1,9 @@
 <div class="simple-calendar">
-  <table class="table table-striped">
+  <table class="table table-responsive table-striped">
     <thead>
       <tr>
         <% date_range.slice(0, 7).each do |day| %>
-          <th><%= t('date.abbr_day_names')[day.wday] %></th>
+          <th><%= t('date.day_names')[day.wday] %></th>
         <% end %>
       </tr>
     </thead>

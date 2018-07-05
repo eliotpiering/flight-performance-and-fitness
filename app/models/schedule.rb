@@ -24,6 +24,10 @@ class Schedule
     end.flatten
   end
 
+  def self.legend
+    [:open_gym, :conditioning, :personal_training, :boxing, :empty]
+  end
+
   def self.events(day)
     case(day.strftime("%A").downcase.to_sym)
     when :sunday

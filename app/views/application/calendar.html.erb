@@ -1,22 +1,38 @@
-<div class="container-fluid mt-5 mb-5" id="contact-form-container">
+<div class="container-fluid mt-5 mb-5" id="calendar-container">
     <div class="row mt-3 mb-3">
         <div class="col lead text-center">
-            <h1>Class Schedule</h1>
-            <p>Your first class is free, drop in anytime.</p>
+            <h1>Schedule</h1>
+            <!-- <h4>First class is free</h4> -->
         </div>
     </div>
-    <div class="row">
-      <div class="col table-responsive">
-          <%= calendar number_of_days: 6, events: @schedule do |date, events| %>
-              <ul id="day-list">
+    <div class="row justify-content-end">
+        <div class="col-4 legend">
+           <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Legend
+           </a>
+           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+               <% Schedule.legend.each do |l| %>
+                   <a class="legend-item dropdown-item">
+                       <span class="<%= l.to_s.gsub('_', '-') %> badge badge-default">&nbsp;</span>
+                       <%= l.to_s.titleize %>
+                   </a>
+               <% end %>
+           </div>
+ 
+        </div>
+    </div>
+    <div class="col-12">
+        <%= calendar number_of_days: 6, events: @schedule do |date, events| %>
+            <ul id="day-list">
                 <% events.each do |event| %>
-                    <li class="event-item <%= event.class_name %>" data-duration="<%= event.duration %>" data-toggle="tooltip" data-placement="top" title="<%= event.description %>">
-                        <b><%= event.start_time.strftime("%l:%M %p") %> - <%= event.end_time.strftime("%l:%M %p") %>: </b>
-                        <%= event.name %>
-                    </li>
+                        <li class="truncate event-item <%= event.class_name %>" data-duration="<%= event.duration %>" data-toggle="tooltip" data-placement="top" title="<%= event.description %>">
+                            <b>
+                                <%= event.start_time.strftime("%l:%M") %> - <%= event.end_time.strftime("%l:%M%p") %>
+                            </b>
+                            <%= event.name %>
+                        </li>
                 <% end %>
-              </ul>
+            </ul>
         <% end %>
-      </div>
     </div>
 </div>

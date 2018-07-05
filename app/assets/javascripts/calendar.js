@@ -8,4 +8,7 @@ document.addEventListener("turbolinks:load", function() {
         _this.css("margin-top" , padding);
         _this.css("margin-bottom" , padding);
     });
+
+  //weird hack for the bootstrap calendar
+  // $(".dropdown-toggle").click(); 
 });
