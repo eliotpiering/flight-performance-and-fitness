@@ -25,11 +25,8 @@
         <%= calendar number_of_days: 6, events: @schedule do |date, events| %>
             <ul id="day-list">
                 <% events.each do |event| %>
-                        <li class="truncate event-item <%= event.class_name %>" data-duration="<%= event.duration %>" data-toggle="tooltip" data-placement="top" title="<%= event.description %>">
-                            <b>
-                                <%= event.start_time.strftime("%l:%M") %> - <%= event.end_time.strftime("%l:%M%p") %>
-                            </b>
-                            <%= event.name %>
+                        <li class="event-item <%= event.class_name %>" data-duration="<%= event.duration %>" data-toggle="tooltip" data-placement="top" title="<%= event.description %>">
+                            <b> <%= event.start_time.strftime("%l:%M") %> - <%= event.end_time.strftime("%l:%M%p") %> </b> <%= event.name %>
                         </li>
                 <% end %>
             </ul>
