@@ -25,7 +25,7 @@ class Schedule
   end
 
   def self.legend
-    [:open_gym, :conditioning, :personal_training, :boxing, :empty]
+    [:open_gym, :conditioning, :personal_training, :boxing]
   end
 
   def self.events(day)
@@ -33,15 +33,15 @@ class Schedule
     when :sunday
       []
     when :monday
-      [open_gym(day, 5.5, 3.5), empty(day, 9), personal_training(day, 10, 5), open_gym(day, 15, 5)]
+      [open_gym(day, 5.5, 4.5), personal_training(day, 10, 5), open_gym(day, 15, 5)]
     when :tuesday
       [conditioning(day, 5.5), open_gym(day, 6.5, 2.5), conditioning(day, 9), personal_training(day, 10, 5), open_gym(day, 15, 2.5), conditioning(day, 17.5), open_gym(day, 18.5)]
     when :wednesday
-      [open_gym(day, 5.5, 3.5), empty(day, 9), personal_training(day, 10, 5), open_gym(day, 15, 5)]
+      [open_gym(day, 5.5, 4.5), personal_training(day, 10, 5), open_gym(day, 15, 5)]
     when :thursday
       [conditioning(day, 5.5), open_gym(day, 6.5, 2.5), conditioning(day, 9), personal_training(day, 10, 5), open_gym(day, 15, 2.5), conditioning(day, 17.5), open_gym(day, 18.5)]
     when  :friday
-      [open_gym(day, 5.5, 3.5), empty(day, 9), personal_training(day, 10, 5), open_gym(day, 15, 5)]
+      [open_gym(day, 5.5, 4.5), personal_training(day, 10, 5), open_gym(day, 15, 5)]
     when :saturday
       [empty(day, 5.5, 3), conditioning(day, 8.5), open_gym(day, 9.5, 0.5), boxing(day, 10)]
     end
