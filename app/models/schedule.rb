@@ -34,17 +34,17 @@ class Schedule
     when :sunday
       []
     when :monday
-      [open_gym(day, 5.5, 5.5), personal_training(day, 11, 4), open_gym(day, 15, 5.5)]
+      [open_gym(day, 5.5, 5.5), personal_training(day, 11, 4), open_gym(day, 15, 5)]
     when :tuesday
-      [conditioning(day, 5.5), open_gym(day, 6.5, 2.5), conditioning(day, 9), personal_training(day, 10, 5), open_gym(day, 15, 3), conditioning(day, 18), open_gym(day, 19, 1.5)]
+      [conditioning(day, 5.5), open_gym(day, 6.5, 2.5), conditioning(day, 9), personal_training(day, 10, 5), open_gym(day, 15, 3), conditioning(day, 18), open_gym(day, 19, 1)]
     when :wednesday
-      [open_gym(day, 5.5, 5.5), personal_training(day, 11, 4), open_gym(day, 15, 5.5)]
+      [open_gym(day, 5.5, 5.5), personal_training(day, 11, 4), open_gym(day, 15, 5)]
     when :thursday
-      [conditioning(day, 5.5), open_gym(day, 6.5, 2.5), conditioning(day, 9), personal_training(day, 10, 5), open_gym(day, 15, 3), conditioning(day, 18), open_gym(day, 19, 1.5)]
+      [conditioning(day, 5.5), open_gym(day, 6.5, 2.5), conditioning(day, 9), personal_training(day, 10, 5), open_gym(day, 15, 3), conditioning(day, 18), open_gym(day, 19, 1)]
     when  :friday
-      [open_gym(day, 5.5, 5.5), personal_training(day, 11, 4), open_gym(day, 15, 5.5)]
+      [open_gym(day, 5.5, 5.5), personal_training(day, 11, 4), open_gym(day, 15, 5)]
     when :saturday
-      [empty(day, 5.5, 2.5), open_gym(day, 8, 7), conditioning(day, 8.5, 1, overlap: -6.5)] #, open_gym(day, 9.5, 3.5),]
+      [empty(day, 5.5, 1.5), open_gym(day, 7, 5), conditioning(day, 8.5, 1, overlap: -3.5)] #, open_gym(day, 9.5, 3.5),]
     end
   end
 
