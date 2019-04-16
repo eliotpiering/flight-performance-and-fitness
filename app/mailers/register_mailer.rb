@@ -6,6 +6,7 @@ class RegisterMailer < ApplicationMailer
     @times = params[:times]
     @goals = params[:goals]
     @experience = params[:experience]
+    @age = params[:age]
     @injury_history = params[:injury_history]
     mail(from: @email, to: 'flightperformanceandfitness@gmail.com', subject: 'Free Evaluation Sign up')
   end
