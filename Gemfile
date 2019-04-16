@@ -32,7 +32,7 @@ gem 'capistrano-rails', group: :development
 gem 'capistrano3-puma'
 gem 'capistrano-rbenv', '~> 2.1'
 
-gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
+gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem', tag: "v4.0.0.alpha6"
 gem 'jquery-rails'
 gem "jquery-slick-rails"
 
