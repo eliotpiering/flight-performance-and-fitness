@@ -14,6 +14,7 @@
 //= require jquery
 //= require turbolinks
 //= require jquery.slick
+//= require tether
 //= require popper
 //= require moment
 //= require bootstrap-sprockets
