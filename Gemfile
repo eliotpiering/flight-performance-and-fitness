@@ -37,7 +37,7 @@ gem 'jquery-rails'
 gem "jquery-slick-rails"
 
 gem "font-awesome-rails"
-gem "popper_js"
+gem "popper_js", '1.14.5'
 gem 'mailgun-ruby', '~>1.1.6'
 gem 'bootstrap4-datetime-picker-rails'
 gem 'momentjs-rails'
