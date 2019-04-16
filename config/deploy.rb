@@ -12,6 +12,10 @@ set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rben
 set :rbenv_map_bins, %w{rake gem bundle ruby rails puma pumactl}
 set :rbenv_roles, :all
 
+set :nvm_type, :user # or :system, depends on your nvm setup
+set :nvm_node, 'v10.15.3'
+set :nvm_map_bins, %w{node npm yarn}
+
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
