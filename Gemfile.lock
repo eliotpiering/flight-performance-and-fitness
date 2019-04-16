@@ -68,6 +68,8 @@ GEM
       sshkit (>= 1.9.0)
     capistrano-bundler (1.5.0)
       capistrano (~> 3.1)
+    capistrano-nvm (0.0.7)
+      capistrano (~> 3.1)
     capistrano-rails (1.4.0)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
@@ -248,6 +250,7 @@ DEPENDENCIES
   bootstrap!
   bootstrap4-datetime-picker-rails
   byebug
+  capistrano-nvm
   capistrano-rails
   capistrano-rbenv (~> 2.1)
   capistrano3-puma
