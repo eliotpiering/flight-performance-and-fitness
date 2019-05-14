@@ -138,8 +138,9 @@ body {
     font-weight: bold;
 }
 
-#day-list {
+.day-list {
     padding-left: 0px;
+    position: relative;
     li {
         list-style: none;
         border-radius: 8px;

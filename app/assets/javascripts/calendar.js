@@ -9,10 +9,10 @@ document.addEventListener("turbolinks:load", function() {
         _this.css("margin-top" , padding);
         _this.css("margin-bottom" , padding);
       if(_this.data('overlap')) {
-        _this.css('position', 'relative');
         var moveDown = parseFloat(_this.data('overlap')) * hourHeight;
-        _this.css('top', moveDown);
-        _this.css('width', '75%');
+        _this.css('width', '85%');
+        _this.css("position", "absolute");
+        _this.css("top", moveDown);
       }
 
       if(_this.innerHeight() < (hourHeight) && _this.innerWidth() < 160) {

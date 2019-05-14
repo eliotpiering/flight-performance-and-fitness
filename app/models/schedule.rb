@@ -20,31 +20,31 @@ class Schedule
   end
 
   def self.generate
-    (start..(start + 6.days)).collect do |day|
+    (start..(start + 7.days)).collect do |day|
       events(day)
     end.flatten
   end
 
   def self.legend
-    [:open_gym, :conditioning, :personal_training, :boxing]
+    [:open_gym, :conditioning, :closed]
   end
 
   def self.events(day)
     case(day.strftime("%A").downcase.to_sym)
     when :sunday
-      []
+      [empty(day, 5.5, 3), conditioning(day, 9), empty(day, 10, 9)]
     when :monday
-      [open_gym(day, 5.5, 5.5), personal_training(day, 11, 4), open_gym(day, 15, 5)]
+      [open_gym(day, 5.5, 5.5), empty(day, 11, 4), open_gym(day, 15, 5)]
     when :tuesday
-      [conditioning(day, 5.5), open_gym(day, 6.5, 2.5), conditioning(day, 9), personal_training(day, 10, 5), open_gym(day, 15, 3), conditioning(day, 18), open_gym(day, 19, 1)]
+      [open_gym(day, 5.5, 5.5), empty(day, 11, 4), open_gym(day, 15, 5), conditioning(day, 18, 1, overlap: 12)]
     when :wednesday
-      [open_gym(day, 5.5, 5.5), personal_training(day, 11, 4), open_gym(day, 15, 5)]
+      [open_gym(day, 5.5, 5.5), empty(day, 11, 4), open_gym(day, 15, 5)]
     when :thursday
-      [conditioning(day, 5.5), open_gym(day, 6.5, 2.5), conditioning(day, 9), personal_training(day, 10, 5), open_gym(day, 15, 3), conditioning(day, 18), open_gym(day, 19, 1)]
+      [open_gym(day, 5.5, 5.5), empty(day, 11, 4), open_gym(day, 15, 5), conditioning(day, 18, 1, overlap: 12)]
     when  :friday
-      [open_gym(day, 5.5, 5.5), personal_training(day, 11, 4), open_gym(day, 15, 5)]
+      [open_gym(day, 5.5, 5.5), empty(day, 11, 4), open_gym(day, 15, 5)]
     when :saturday
-      [empty(day, 5.5, 1.5), open_gym(day, 7, 5), conditioning(day, 8.5, 1, overlap: -3.5)] #, open_gym(day, 9.5, 3.5),]
+      [empty(day, 5.5, 1.5), open_gym(day, 7, 5), conditioning(day, 8.5, 1, overlap: 2.5), empty(day, 8.5, 8),]
     end
   end
 
@@ -55,7 +55,7 @@ class Schedule
   end
 
   def self.empty(date, start_hour, duration=1)
-    event("", "", "empty-event", date, start_hour, duration, {})
+    event("Closed", "Closed", "empty-event", date, start_hour, duration, {})
   end
 
   def self.open_gym(date, start_hour, duration=1)

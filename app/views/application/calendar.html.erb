@@ -5,8 +5,9 @@
             <!-- <h4>First class is free</h4> -->
         </div>
     </div>
-    <div class="row justify-content-end">
-        <div class="col-4 legend">
+    <div class="row">
+        <div class="col-8 col-md-10 col-lg-11"></div>
+        <div class="col-4 col-md-2 legend text-center col-lg-1">
            <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                Legend
            </a>
@@ -22,8 +23,8 @@
         </div>
     </div>
     <div class="col-12">
-        <%= calendar number_of_days: 6, events: @schedule do |date, events| %>
-            <ul id="day-list">
+        <%= calendar number_of_days: 7, events: @schedule do |date, events| %>
+            <ul class="day-list">
                 <% events.each do |event| %>
                     <li class="event-item <%= event.class_name %>" data-duration="<%= event.duration %>" data-toggle="tooltip" data-placement="top" title="<%= event.description %>" data-overlap="<%= event.overlap %>">
                             <b> <%= event.start_time.strftime("%l:%M") %> - <%= event.end_time.strftime("%l:%M%p") %> </b> <span class="event-description"><%= event.name %>
