@@ -26,7 +26,7 @@ class Schedule
   end
 
   def self.legend
-    [:open_gym, :conditioning, :closed]
+    [:open_gym, :conditioning]
   end
 
   def self.events(day)
@@ -34,15 +34,15 @@ class Schedule
     when :sunday
       [empty(day, 5.5, 3), conditioning(day, 9), empty(day, 10, 9)]
     when :monday
-      [open_gym(day, 5.5, 5.5), empty(day, 11, 4), open_gym(day, 15, 5)]
+      [open_gym(day, 5.5, 4.5), empty(day, 10, 5), open_gym(day, 15, 5)]
     when :tuesday
-      [open_gym(day, 5.5, 5.5), empty(day, 11, 4), open_gym(day, 15, 5), conditioning(day, 18, 1, overlap: 12)]
+      [open_gym(day, 5.5, 4.5), empty(day, 10, 5), open_gym(day, 15, 5), conditioning(day, 18, 1, overlap: 12)]
     when :wednesday
-      [open_gym(day, 5.5, 5.5), empty(day, 11, 4), open_gym(day, 15, 5)]
+      [open_gym(day, 5.5, 4.5), empty(day, 10, 5), open_gym(day, 15, 5)]
     when :thursday
-      [open_gym(day, 5.5, 5.5), empty(day, 11, 4), open_gym(day, 15, 5), conditioning(day, 18, 1, overlap: 12)]
+      [open_gym(day, 5.5, 4.5), empty(day, 10, 5), open_gym(day, 15, 5), conditioning(day, 18, 1, overlap: 12)]
     when  :friday
-      [open_gym(day, 5.5, 5.5), empty(day, 11, 4), open_gym(day, 15, 5)]
+      [open_gym(day, 5.5, 4.5), empty(day, 10, 5), open_gym(day, 15, 5)]
     when :saturday
       [empty(day, 5.5, 1.5), open_gym(day, 7, 5), conditioning(day, 8.5, 1, overlap: 2.5), empty(day, 8.5, 8),]
     end
