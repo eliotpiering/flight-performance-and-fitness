@@ -32,7 +32,7 @@ class Schedule
   def self.events(day)
     case(day.strftime("%A").downcase.to_sym)
     when :sunday
-      [empty(day, 5.5, 3), conditioning(day, 9), empty(day, 10, 9)]
+      [empty(day, 5.5, 3.5), conditioning(day, 9), empty(day, 10, 9)]
     when :monday
       [open_gym(day, 5.5, 4.5), empty(day, 10, 5), open_gym(day, 15, 5)]
     when :tuesday
@@ -44,7 +44,7 @@ class Schedule
     when  :friday
       [open_gym(day, 5.5, 4.5), empty(day, 10, 5), open_gym(day, 15, 5)]
     when :saturday
-      [empty(day, 5.5, 1.5), open_gym(day, 7, 5), conditioning(day, 8.5, 1, overlap: 2.5), empty(day, 8.5, 8),]
+      [empty(day, 5.5, 1.5), open_gym(day, 7, 5), conditioning(day, 8.5, 1, overlap: 3.5), empty(day, 8.5, 8),]
     end
   end
 
