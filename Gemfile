@@ -39,7 +39,7 @@ gem 'capistrano3-puma'
 gem 'capistrano-rbenv', '~> 2.1'
 gem 'capistrano-nvm', group: :development
 
-gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem', tag: "v4.0.0.alpha6"
+gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem', tag: "v4.3.1"
 gem 'jquery-rails'
 gem "jquery-slick-rails"
 

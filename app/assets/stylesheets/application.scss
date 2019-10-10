@@ -1,6 +1,8 @@
-$brand-primary: #01aef0;
-$btn-primary-color: black;
-$btn-font-weight: 800;
+$primary: #01aef0;
+// $btn-primary: black;
+// $btn-font-weight: bold;
+
+
 /* styles for slick */
 // @import 'slick';
 // $slick-dot-color: white !important;
@@ -154,7 +156,7 @@ body {
     }
 }
 .open-gym {
-    background-color: $brand-primary;
+    background-color: $primary;
 }
 .personal-training {
     background-color: #005270; //$brand-warning;

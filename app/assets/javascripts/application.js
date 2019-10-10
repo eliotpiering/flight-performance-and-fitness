@@ -95,23 +95,15 @@ document.addEventListener("turbolinks:load", function() {
             clearTimeout(showModalTimeout);
         });
         $(window).scroll(function () {
-            // console.log("OUTSIDE")
-            // console.log("times show per page " + getTimesShownPerPage());
-            // console.log("times show per session " + getTimesShownPerSession());
-            // console.log("---------------------------------------------")
             if (!showModalTimeout) {
-                // console.log("MIDDLE")
-                // console.log("times show per page " + getTimesShownPerPage());
-                // console.log("times show per session " + getTimesShownPerSession());
-                // console.log("---------------------------------------------")
                 showModalTimeout = setTimeout(function () {
                     clearTimeout(showModalTimeout);
                     showModalTimeout = null;
-                    // console.log("INSIDE")
-                    // console.log("times show per page " + getTimesShownPerPage());
-                    // console.log("times show per session " + getTimesShownPerSession());
-                    // console.log("---------------------------------------------")
+                    currentPage = window.location.pathname;
                     var showModal = $(window).scrollTop() >= HEIGHT_TO_SHOW
+                        && currentPage !== "/evaluation"
+                        && currentPage !== "/calendar"
+                        && currentPage !== "/about"
                         && getTimesShownPerPage() < MAX_TIMES_SHOWN_PER_PAGE
                         && getTimesShownPerSession() < MAX_TIMES_SHOWN_PER_SESSION;
 

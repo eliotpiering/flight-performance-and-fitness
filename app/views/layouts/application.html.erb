@@ -37,7 +37,7 @@
     </head>
 
     <body>
-        <section id="header" class="container-fluid white-font bg-inverse"> <!-- Header -->
+        <section id="header" class="container-fluid white-font bg-dark"> <!-- Header -->
                 <div class="row bg-primary text-right align-items-center pb-2 pt-2">
                     <div class="offset-xs-6 col-xs-6 offset-sm-9 col-sm-3 social-icons">
                         <a href='https://www.yelp.com/biz/flight-performance-and-fitness-newton' target="_blank"> <%= fa_icon 'yelp' %></a>
@@ -48,7 +48,7 @@
                     </div>
 
                 </div>
-            <nav class="container navbar navbar-toggleable-md navbar-expand-lg navbar-inverse bg-inverse">
+            <nav class="container navbar navbar-toggleable-md navbar-expand-lg navbar-dark bg-dark">
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -75,7 +75,7 @@
         <section id="main">
             <%= yield %>
         </section>
-        <section class="container-fluid bg-inverse"> <!-- Footer -->
+        <section class="container-fluid bg-dark"> <!-- Footer -->
             <div id="footer-image" class="row">
             </div>
             <div class="row">
@@ -93,7 +93,7 @@
             </div>
         </section>
         <section>
-            <div id="sign-up-modal" class="modal">
+            <div id="sign-up-modal" class="modal" tabindex="-1" role="dialog">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header text-center">
@@ -103,11 +103,13 @@
                             </button>
                         </div>
                         <div class="modal-body text-center">
-                            <p>We do things a bit differently at Flight. We believe in order to achieve the results you want, our coaches need to create specialized programs tailed to your fitness goals.  In order to do this we ask you come in for a free evaluation.<p>
-                            <a href="<%= evaluation_path %>"class="btn btn-primary">Sign up today for your free evaluation</a>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <h3>We do things a bit differently at Flight... </h3>
+                            <br>
+                            <p class="lead">In order to achieve the results you want, our coaches need to create a specialized program tailed to ypu. In order to do this we ask you come in for a free evaluation. No obligations, just come in for a 1 hour workout and you can see what we are all about.</p>
+                            <br>
+                            <a href="<%= evaluation_path %>">
+                                <button class="btn btn-primary">Sign up today for your free evaluation</button>
+                            </a>
                         </div>
                     </div>
                 </div>
