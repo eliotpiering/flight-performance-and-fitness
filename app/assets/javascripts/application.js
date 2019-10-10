@@ -25,7 +25,33 @@
 //     console.log('backspace')
 // });
 
+// variables for showing sign up modal
+// These are defined outside the turbolinks load so they last across the session
+var showModalTimeout = null;
+var HEIGHT_TO_SHOW = 400;
+var MAX_TIMES_SHOWN_PER_SESSION = 2;
+var MAX_TIMES_SHOWN_PER_PAGE = 1;
+var timesShownPerSession = 0;
+var timesShownPerPage = 0;
+
+// Using getters and setters to avoid weird scope issues
+function getTimesShownPerPage() {
+    return timesShownPerPage;
+}
+function getTimesShownPerSession() {
+    return timesShownPerSession;
+}
+function setTimesShownPerPage(val) {
+    timesShownPerPage = val;
+}
+function setTimesShownPerSession(val) {
+    timesShownPerSession = val;
+}
+
+
 document.addEventListener("turbolinks:load", function() {
+
+    setTimesShownPerPage(0); // put this here for resetting the show eval modal everytime we change the page
 
     $(document).ready(function(){
         $("#image-slider").slick({
@@ -51,15 +77,49 @@ document.addEventListener("turbolinks:load", function() {
                 $form = $button.parents('form');
             var opts = $.extend({}, $button.data(), {
                 token: function(result) {
-                    $form.append($('<input>').attr({ type: 'hidden', name: 'stripeToken', value: result.id }))
-                    $form.append($('<input>').attr({ type: 'hidden', name: 'stripeEmail', value: result.email }))
+                    $form.append($('<input>').attr({ type: 'hidden', name: 'stripeToken', value: result.id }));
+                    $form.append($('<input>').attr({ type: 'hidden', name: 'stripeEmail', value: result.email }));
                     $form.submit();
                 }
             });
             StripeCheckout.open(opts);
         });
 
-        $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="tooltip"]').tooltip();
 
+
+        ////////// SHOW EVAL MODAL AFTER SCOLLING CERTAIN AMOUNT ///////////////
+        $("#sign-up-modal").on('hide.bs.modal', function() {
+            setTimesShownPerSession(getTimesShownPerSession() + 1);
+            setTimesShownPerPage(getTimesShownPerPage() + 1);
+            clearTimeout(showModalTimeout);
+        });
+        $(window).scroll(function () {
+            // console.log("OUTSIDE")
+            // console.log("times show per page " + getTimesShownPerPage());
+            // console.log("times show per session " + getTimesShownPerSession());
+            // console.log("---------------------------------------------")
+            if (!showModalTimeout) {
+                // console.log("MIDDLE")
+                // console.log("times show per page " + getTimesShownPerPage());
+                // console.log("times show per session " + getTimesShownPerSession());
+                // console.log("---------------------------------------------")
+                showModalTimeout = setTimeout(function () {
+                    clearTimeout(showModalTimeout);
+                    showModalTimeout = null;
+                    // console.log("INSIDE")
+                    // console.log("times show per page " + getTimesShownPerPage());
+                    // console.log("times show per session " + getTimesShownPerSession());
+                    // console.log("---------------------------------------------")
+                    var showModal = $(window).scrollTop() >= HEIGHT_TO_SHOW
+                        && getTimesShownPerPage() < MAX_TIMES_SHOWN_PER_PAGE
+                        && getTimesShownPerSession() < MAX_TIMES_SHOWN_PER_SESSION;
+
+                    if (showModal) {
+                        $("#sign-up-modal").modal('show');
+                    }
+                }, 1000);
+            }
+        });
     });
-})
+});
