@@ -25,6 +25,9 @@ class ApplicationController < ActionController::Base
     RegisterMailer.confirm(register_params).deliver_now
   end
 
+  def privacy
+  end
+
 
   private
 

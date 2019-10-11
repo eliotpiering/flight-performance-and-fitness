@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'calendar', to: 'application#calendar'
   get 'evaluation', to: 'application#evaluation'
   post 'evaluation', to: 'application#submit_evaluation'
+  get 'privacy', to: 'application#privacy'
 
   post 'charges/:event_id', to: 'charges#create', as: 'charges'
 end
