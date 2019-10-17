@@ -103,7 +103,6 @@ document.addEventListener("turbolinks:load", function() {
                     var showModal = $(window).scrollTop() >= HEIGHT_TO_SHOW
                         && currentPage !== "/evaluation"
                         && currentPage !== "/calendar"
-                        && currentPage !== "/about"
                         && currentPage !== "/privacy"
                         && getTimesShownPerPage() < MAX_TIMES_SHOWN_PER_PAGE
                         && getTimesShownPerSession() < MAX_TIMES_SHOWN_PER_SESSION;
