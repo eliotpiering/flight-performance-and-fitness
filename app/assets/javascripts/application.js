@@ -29,7 +29,7 @@
 // These are defined outside the turbolinks load so they last across the session
 var showModalTimeout = null;
 var HEIGHT_TO_SHOW = 400;
-var MAX_TIMES_SHOWN_PER_SESSION = 2;
+var MAX_TIMES_SHOWN_PER_SESSION = 3;
 var MAX_TIMES_SHOWN_PER_PAGE = 1;
 var timesShownPerSession = 0;
 var timesShownPerPage = 0;
