@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
   private
 
   def register_params
-    params.permit(:name, :email, :goals, :experience, :age, :injury_history, times: {})
+    params.permit(:name, :email, :goals, :experience, :age, :injury_history, :how_did_you_hear_about_us, times: {})
   end
 
   def contact_params

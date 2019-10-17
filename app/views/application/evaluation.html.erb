@@ -13,21 +13,21 @@
             <%= form_with url: evaluation_path, id: 'register-form' do |f|%>
                 <div class="row mb-2 mt-2">
                     <div class="col-md-4 col-sm-12">
-                        <label>Name: </label>
+                        <label>Name *</label>
                         <%= f.text_field "name", class: "form-control form-control-lg", required: true %>
                     </div>
                     <div class="col-md-4 col-sm-12">
-                    <label>Email: </label>
+                    <label>Email *</label>
                     <%= f.email_field "email", class: "form-control form-control-lg", required: true %>
                     </div>
                     <div class="col-md-4 col-sm-12">
-                        <label>Age: </label>
+                        <label>Age</label>
                         <%= f.number_field "age", class: "form-control form-control-lg", required: false %>
                     </div>
                 </div>
                 <div class="row mt-2 mb-2">
                     <div class="col">
-                        <label>Fitness Goals</label>
+                        <label>Fitness Goals *</label>
                         <%= f.text_area "goals", class: "form-control", required: true %>
                     </div>
                 </div>
@@ -43,20 +43,26 @@
                         <%= f.text_area "injury_history", class: "form-control" %>
                     </div>
                 </div>
+                <div class="row mt-2 mb-2">
+                    <div class="col">
+                        <label>How did you hear about us?</label>
+                        <%= f.text_area "how_did_you_hear_about_us", class: "form-control" %>
+                    </div>
+                </div>
                 <div class="row mb-2 mt-2">
                   <div class="col-12 mt-2 mb-2">
                      <h5>Availability</h5>
                   </div>
                   <div class="col-md-4 col-sm-12">
-                    <label>Time 1: </label>
+                    <label>Time 1 *</label>
                     <%= f.text_field "[times][1]", class: "form-control form-control-lg datetimepicker-input", data: {toggle: "datetimepicker", target:"#datetimepicker#{1}"}, id: "datetimepicker#{1}", required: true %>
                   </div>
                   <div class="col-md-4 col-sm-12">
-                    <label>Time 2: </label>
+                    <label>Time 2 *</label>
                     <%= f.text_field "[times][2]", class: "form-control form-control-lg datetimepicker-input", data: {toggle: "datetimepicker", target:"#datetimepicker#{2}"}, id: "datetimepicker#{2}", required: true %>
                   </div>
                   <div class="col-md-4 col-sm-12">
-                    <label>Time 3: </label>
+                    <label>Time 3</label>
                     <%= f.text_field "[times][3]", class: "form-control form-control-lg datetimepicker-input", data: {toggle: "datetimepicker", target:"#datetimepicker#{3}"}, id: "datetimepicker#{3}", required: false %>
                   </div>
                 </div>
