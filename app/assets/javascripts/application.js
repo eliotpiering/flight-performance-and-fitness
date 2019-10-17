@@ -101,16 +101,12 @@ document.addEventListener("turbolinks:load", function() {
                     showModalTimeout = null;
                     currentPage = window.location.pathname;
                     var showModal = $(window).scrollTop() >= HEIGHT_TO_SHOW
-                        && currentPage == "/privacy"
+                        && currentPage !== "/evaluation"
+                        && currentPage !== "/calendar"
+                        && currentPage !== "/about"
+                        && currentPage !== "/privacy"
                         && getTimesShownPerPage() < MAX_TIMES_SHOWN_PER_PAGE
                         && getTimesShownPerSession() < MAX_TIMES_SHOWN_PER_SESSION;
-                    // var showModal = $(window).scrollTop() >= HEIGHT_TO_SHOW
-                    //     && currentPage !== "/evaluation"
-                    //     && currentPage !== "/calendar"
-                    //     && currentPage !== "/about"
-                    //     && currentPage !== "/privacy"
-                    //     && getTimesShownPerPage() < MAX_TIMES_SHOWN_PER_PAGE
-                    //     && getTimesShownPerSession() < MAX_TIMES_SHOWN_PER_SESSION;
 
                     if (showModal) {
                         $("#sign-up-modal").modal('show');
