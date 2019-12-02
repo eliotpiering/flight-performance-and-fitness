@@ -106,7 +106,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
 
-  config.action_mailer.default_url_options = { host: 'flightperformanceandfitness.com', port: 443 }
+  config.action_mailer.default_url_options = { host: 'flightperformanceandfitness.com', port: 80 }
 
 
   #TODO switch this to use s3 in the future
