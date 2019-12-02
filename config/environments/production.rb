@@ -107,4 +107,8 @@ Rails.application.configure do
 
 
   config.action_mailer.default_url_options = { host: 'flightperformanceandfitness.com', port: 443 }
+
+
+  #TODO switch this to use s3 in the future
+  config.active_storage.service = :local
 end
