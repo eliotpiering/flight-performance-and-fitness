@@ -38,16 +38,15 @@
 
     <body>
         <section id="header" class="container-fluid white-font bg-dark"> <!-- Header -->
-                <div class="row bg-primary text-right align-items-center pb-2 pt-2">
-                    <div class="offset-xs-6 col-xs-6 offset-sm-9 col-sm-3 social-icons">
-                        <a href='https://www.yelp.com/biz/flight-performance-and-fitness-newton' target="_blank"> <%= fa_icon 'yelp' %></a>
-                        <a href='https://www.facebook.com/flightperformance/' target="_blank"> <%= fa_icon 'facebook-official' %></a>
-                        <a href='https://www.instagram.com/flight_performance/' target="_blank"> <%= fa_icon 'instagram' %></a>
-                        <a class="flight-app-link" href='#' class="text-white" target="_blank"><%= fa_icon 'mobile' %></a>
-                        <!-- <a href="https://flightperformanceandfitness.zenplanner.com/zenplanner/portal/calendar.cfm" target="_blank" ><%= fa_icon 'calendar-o' %></a> -->
-                    </div>
-
+            <div class="row bg-primary text-right align-items-center pb-2 pt-2">
+                <div class="offset-xs-6 col-xs-6 offset-sm-9 col-sm-3 social-icons">
+                    <a href='https://www.yelp.com/biz/flight-performance-and-fitness-newton' target="_blank"> <%= fa_icon 'yelp' %></a>
+                    <a href='https://www.facebook.com/flightperformance/' target="_blank"> <%= fa_icon 'facebook-official' %></a>
+                    <a href='https://www.instagram.com/flight_performance/' target="_blank"> <%= fa_icon 'instagram' %></a>
+                    <a class="flight-app-link" href='#' class="text-white" target="_blank"><%= fa_icon 'mobile' %></a>
+                    <!-- <a href="https://flightperformanceandfitness.zenplanner.com/zenplanner/portal/calendar.cfm" target="_blank" ><%= fa_icon 'calendar-o' %></a> -->
                 </div>
+            </div>
             <nav class="container navbar navbar-toggleable-md navbar-expand-lg navbar-dark bg-dark">
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -59,20 +58,28 @@
                     <a class="navbar-brand" href="#"></a>
                     <ul class="navbar-nav">
                         <%= nav_link "Home", root_path %>
+                        <%#= nav_link "Blog", posts_path %>
                         <%= nav_link "Contact", contact_path  %>
                         <%= nav_link "Services", services_path %>
                         <%= nav_link "About", about_path %>
-                        <%#= nav_link "Testimonials", testimonials_path %>
                         <%#= nav_link "Events", events_path %>
                         <%= nav_link "Schedule", calendar_path %>
                         <%= nav_link "Get Started", evaluation_path %>
                         <%= nav_link "Store", "https://teamlocker.squadlocker.com/#/lockers/flight-performance" %>
-
+                        <% if user_signed_in? %>
+                            <%= nav_link "Log Out", destroy_user_session_path, method: :delete %>
+                        <% end %>
                     </ul>
                 </div>
             </nav>
         </section>
         <section id="main">
+            <% if notice %>
+              <p class="alert alert-primary" role="alert"><%= notice %></p>
+            <% end %>
+            <% if alert %>
+              <p class="alert alert-danger" role="alert"><%= alert %></p>
+            <% end %>
             <%= yield %>
         </section>
         <section class="container-fluid bg-dark"> <!-- Footer -->

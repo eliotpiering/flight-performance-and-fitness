@@ -14,6 +14,7 @@ $primary: #01aef0;
 @import "tempusdominus-bootstrap-4";
 /* @import 'slick-theme'; */
 /* @import 'video-js'; */
+@import 'trix';
 
 body {
     font-family: 'Lato', sans-serif;
@@ -185,5 +186,14 @@ body {
 /* Services */
 .card {
     min-width:240px
+
+}
+
+.trix-content {
+
+    img {
+        @include img-fluid;
+
+    }
 
 }

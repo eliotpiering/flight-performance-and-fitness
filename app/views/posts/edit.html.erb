@@ -1,0 +1,27 @@
+<div class="container">
+   <div class="row mt-5 mb-5">
+      <div class="col">
+        <%= hidden_field_tag :post_id, @post.id %>
+        <%= form_with model: @post do |f| %>
+            <div class="form-group">
+                <%= f.label :title %>
+                <%= f.text_field :title, class: "form-control"%>
+            </div>
+            <div>
+                <%= f.trix_editor :post_body, required: true, autofocus: true, class: "trix-content" %>
+            </div>
+            <div class="form-group">
+                <%= f.label :author %>
+                <%= f.select :author_id, Author.all.pluck(:name, :id), class: "custom-select" %>
+            </div>
+<div class="form-group">
+                <div class="custom-control custom-checkbox">
+                    <%= f.check_box :published, class: "custom-control-input", id: "published-checkbox" %>
+                    <%= f.label :published, "Publish Post", class: "custom-control-label", for: "published-checkbox" %>
+                </div>
+            </div>
+            <%= f.submit %>
+        <% end %>
+      </div>
+   </div>
+</div>

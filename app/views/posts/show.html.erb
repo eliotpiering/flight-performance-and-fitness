@@ -1,0 +1,10 @@
+<div class="container">
+   <%= render partial: 'post', locals: { post: @post } %>
+
+   <div class="row">
+       <div class="col">
+           <%= link_to "Edit Post", edit_post_path(@post) %>
+       </div>
+   </div>
+
+</div>

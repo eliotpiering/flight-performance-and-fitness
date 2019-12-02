@@ -19,6 +19,7 @@
 //= require moment
 //= require bootstrap-sprockets
 //= require tempusdominus-bootstrap-4
+//= require trix
 //= require_tree .
 
 // $(window).on('page:restore', function(e) {
