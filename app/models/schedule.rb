@@ -25,26 +25,22 @@ class Schedule
     end.flatten
   end
 
-  def self.legend
-    [:open_gym, :conditioning]
-  end
-
   def self.events(day)
     case(day.strftime("%A").downcase.to_sym)
     when :sunday
-      [empty(day, 5.5, 3.5), conditioning(day, 9), empty(day, 10, 9)]
+      [empty(day, 5.5, 14.5)]
     when :monday
       [open_gym(day, 5.5, 4.5), empty(day, 10, 5), open_gym(day, 15, 5)]
     when :tuesday
-      [open_gym(day, 5.5, 4.5), empty(day, 10, 5), open_gym(day, 15, 5), conditioning(day, 18, 1, overlap: 12)]
+      [open_gym(day, 5.5, 4.5), empty(day, 10, 5), open_gym(day, 15, 5)]
     when :wednesday
       [open_gym(day, 5.5, 4.5), empty(day, 10, 5), open_gym(day, 15, 5)]
     when :thursday
-      [open_gym(day, 5.5, 4.5), empty(day, 10, 5), open_gym(day, 15, 5), conditioning(day, 18, 1, overlap: 12)]
+      [open_gym(day, 5.5, 4.5), empty(day, 10, 5), open_gym(day, 15, 5)]
     when  :friday
       [open_gym(day, 5.5, 4.5), empty(day, 10, 5), open_gym(day, 15, 5)]
     when :saturday
-      [empty(day, 5.5, 1.5), open_gym(day, 7, 5), conditioning(day, 8.5, 1, overlap: 3.5), empty(day, 8.5, 8),]
+      [empty(day, 5.5, 1.5), open_gym(day, 7, 5), empty(day, 8.5, 8),]
     end
   end
 

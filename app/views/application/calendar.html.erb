@@ -5,23 +5,6 @@
             <!-- <h4>First class is free</h4> -->
         </div>
     </div>
-    <div class="row">
-        <div class="col-8 col-md-10 col-lg-11"></div>
-        <div class="col-4 col-md-2 legend text-center col-lg-1">
-           <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               Legend
-           </a>
-           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-               <% Schedule.legend.each do |l| %>
-                   <a class="legend-item dropdown-item">
-                       <span class="<%= l.to_s.gsub('_', '-') %> badge badge-default">&nbsp;</span>
-                       <%= l.to_s.titleize %>
-                   </a>
-               <% end %>
-           </div>
- 
-        </div>
-    </div>
     <div class="col-12">
         <%= calendar number_of_days: 7, events: @schedule do |date, events| %>
             <ul class="day-list">
