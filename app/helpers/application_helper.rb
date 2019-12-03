@@ -17,5 +17,13 @@ module ApplicationHelper
     "hello"
   end
 
+  def sanitize_tags_list
+    ["div", "h1", "h2", "h3", "h4", "h5", "h6", "strong", "em", "br", "hr", "p", "a", "b", "img", "figure", "figcaption", "blockquote", "pre"]
+  end
+
+  def sanitize_attr_list
+    ["src", "href", "class", "width", "height"]
+  end
+
 
 end

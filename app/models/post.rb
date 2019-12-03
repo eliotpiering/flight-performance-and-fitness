@@ -6,4 +6,8 @@ class Post < ApplicationRecord
   belongs_to :author, optional: true
 
   scope :published, -> { where(published: true) }
+
+  def body_preview
+    post_body.truncate_words(3, separator: "<br>")
+  end
 end
