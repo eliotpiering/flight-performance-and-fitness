@@ -21,7 +21,10 @@ Rails.application.routes.draw do
 
   post 'charges/:event_id', to: 'charges#create', as: 'charges'
 
-  resources :posts
+  resources :posts do
+    resources :post_tags, only: [:create, :destroy]
+  end
+
   post 'post_medias', to: 'post_medias#create'
 
   root to: 'application#index'
