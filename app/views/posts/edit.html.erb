@@ -1,8 +1,18 @@
 <div class="container">
-   <div class="row mt-5 mb-5">
+    <% if @post.errors.any? %>
+        <div class="mt-2 alert alert-warning alert-dismissible fade show" role="alert">
+            <h4><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h4>
+            <ul>
+                <% @post.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    <div class="row mt-5 mb-5">
       <div class="col">
         <%= hidden_field_tag :post_id, @post.id %>
-        <%= form_with model: @post do |f| %>
+        <%= form_with model: @post, local: true do |f| %>
             <div class="form-group">
                 <%= f.label :title %>
                 <%= f.text_field :title, class: "form-control"%>
