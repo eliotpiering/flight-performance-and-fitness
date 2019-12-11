@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get 'evaluation', to: 'application#evaluation'
   post 'evaluation', to: 'application#submit_evaluation'
   get 'privacy', to: 'application#privacy'
+  post 'oembed', to: 'oembed#create'
 
   post 'charges/:event_id', to: 'charges#create', as: 'charges'
 

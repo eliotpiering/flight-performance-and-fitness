@@ -12,7 +12,7 @@ class Post < ApplicationRecord
 
   def body_preview
     return "" if post_body.blank?
-    post_body.truncate_words(3, separator: "<br>")
+    post_body.truncate_words(4, separator: "<br>")
   end
 
   def to_param

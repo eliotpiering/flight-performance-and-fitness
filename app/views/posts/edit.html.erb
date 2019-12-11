@@ -18,7 +18,14 @@
                 <%= f.text_field :title, class: "form-control"%>
             </div>
             <div>
-                <%= f.trix_editor :post_body, required: true, autofocus: true, class: "trix-content" %>
+                <trix-toolbar id="my_toolbar"></trix-toolbar>
+                <div class="mt-2 mb-2 col-8 input-group">
+                    <input class="form-control" type="text" id="oembed-input-data"></input>
+                  <div class="input-group-append">
+                    <button type="button" class="btn btn-secondary" id="oembed-submit">Embed Content From URL</button>
+                  </div>
+                </div>
+                <%= f.trix_editor :post_body, toolbar: "my_toolbar", required: true, autofocus: true, class: "trix-content" %>
             </div>
             <div class="form-group">
                 <%= f.label :tags %>

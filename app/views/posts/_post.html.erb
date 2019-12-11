@@ -3,8 +3,12 @@
         <h3>
             <%= post.title %>
         </h3>
+        <%= render partial: 'post_tags', locals: {post: post} %>
         <div class="trix-content">
-            <%= sanitize post.post_body, tags: sanitize_tags_list, attributes: sanitize_attr_list %>
+            <%= raw post.post_body %>
+        </div>
+        <div class="mt-2 post-footer">
+            <p><strong>Authored By: </strong><%= post.author.name %></p>
         </div>
     </div>
 </div>

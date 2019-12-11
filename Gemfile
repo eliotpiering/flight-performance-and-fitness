@@ -76,3 +76,4 @@ gem 'trix-rails', require: 'trix'
 gem 'devise'
 gem 'devise_invitable', '~> 2.0.1'
 
+gem 'ruby-oembed'

@@ -194,7 +194,9 @@ body {
 
     img {
         @include img-fluid;
-
     }
-
+}
+.trix-content
+    .attachment {
+      display: block;
 }
