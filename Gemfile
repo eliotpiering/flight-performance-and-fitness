@@ -77,3 +77,4 @@ gem 'devise'
 gem 'devise_invitable', '~> 2.0.1'
 
 gem 'ruby-oembed'
+gem 'will_paginate', '~> 3.2'
