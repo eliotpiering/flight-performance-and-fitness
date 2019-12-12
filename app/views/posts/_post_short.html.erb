@@ -3,10 +3,11 @@
         <%= link_to post.title, post_path(post) %>
     </h3>
     <%= render partial: 'post_tags', locals: {post: post} %>
-    <div class="trix-content">
-        <%= raw post.body_preview %>
-    </div>
-    <div class="mt-2">
-        <%= link_to "Read More", post_path(post), class: "btn btn-secondary" %>
+    <div class="trix-content truncate-content">
+        <%= raw post.post_body %>
     </div>
 </div>
+<div class="col-12">
+    <%= link_to "Read More", post_path(post), class: "btn btn-secondary" %>
+</div>
+

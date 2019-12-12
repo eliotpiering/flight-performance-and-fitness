@@ -10,17 +10,9 @@ class Post < ApplicationRecord
 
   validates_presence_of [:title, :slug]
 
-  def body_preview
-    return "" if post_body.blank?
-    post_body.truncate_words(4, separator: "<br>")
-  end
-
   def to_param
     return nil unless persisted?
-    [id, slug].compact.join('-') # 1-english-for-everyone
-  end
-
-  def url_key
+    [id, slug].compact.join('-')
   end
 
   private

@@ -200,3 +200,19 @@ body {
     .attachment {
       display: block;
 }
+
+.truncate-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 30em;
+}
+.truncate-content:after{
+    content:"";
+    height: 1.5em;
+    display: block;
+    width: 100%;
+    position:absolute;
+    background-color:white;
+    opacity: 0.8;
+    bottom: -0.4em
+}
