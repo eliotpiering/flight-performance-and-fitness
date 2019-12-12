@@ -13,10 +13,6 @@ module ApplicationHelper
     end
   end
 
-  def datetime_selector
-    "hello"
-  end
-
   def tag_select_helper(form, post)
     items = Tag.all.pluck(:title, :id)
     selected = post.tags.ids

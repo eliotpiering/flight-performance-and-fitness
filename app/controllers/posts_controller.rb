@@ -40,6 +40,13 @@ class PostsController < ApplicationController
     redirect_to posts_path
   end
 
+  def toggle_publish
+    post = Post.find(params[:id])
+    post.update(published: !post.published)
+    flash[:notice] = "Post was #{post.published ? 'Published' : 'Unpublished'}!"
+    redirect_to posts_path
+  end
+
   private
 
   def post_params
