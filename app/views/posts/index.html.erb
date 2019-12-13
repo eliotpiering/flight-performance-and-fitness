@@ -7,7 +7,7 @@
         </div>
     <% end %>
    <% @posts.each do |post| %>
-     <div class="row m-md-2 p-md-3 bg-light">
+     <div class="row my-2 mx-md-2 py-2 p-md-3 bg-light">
         <%= render partial: 'post_short', locals: { post: post } %>
         <% if user_signed_in? %>
           <%= render partial: 'post_admin_info', locals: { post: post } %>

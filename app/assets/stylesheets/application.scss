@@ -211,7 +211,11 @@ body {
     content:"";
     height: 1.5em;
     display: block;
-    width: 90%;
+    width: 100%;
+    @media (min-width: 768px) {
+        /* medium and up */
+        width: 90%;
+    }
     position:absolute;
     background-color:#f8f9fa;
     opacity: 0.8;
