@@ -1,7 +1,7 @@
 <% if post.tags.count > 0 %>
     <div class="tags">
         <hr/>
-        <label><strong>Tags: </strong></label>
+        <label class="mr-2"><strong>Tags:</strong></label>
         <% post.tags.each do |tag| %><span class="badge badge-pill badge-primary mr-1"><%= tag.title %></span><% end %>
         <hr/>
     </div>

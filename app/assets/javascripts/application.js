@@ -30,23 +30,21 @@ $(document).ready(function(){
     var HEIGHT_TO_SHOW = 400;
     var MAX_TIMES_SHOWN_PER_SESSION = 2;
     var MAX_TIMES_SHOWN_PER_PAGE = 1;
-    var timesShownPerSession = 0;
     var timesShownPerPage = 0;
 
-    // Using getters and setters to avoid weird scope issues
     function getTimesShownPerPage() {
         return timesShownPerPage;
-    }
-    function getTimesShownPerSession() {
-        return timesShownPerSession;
     }
     function setTimesShownPerPage(val) {
         timesShownPerPage = val;
     }
-    function setTimesShownPerSession(val) {
-        timesShownPerSession = val;
+
+    function getTimesShownPerSession() {
+        return parseInt(sessionStorage.getItem( 'popupShownCount' )) || 0;
     }
-    setTimesShownPerSession(0);
+    function setTimesShownPerSession(val) {
+        sessionStorage.setItem('popupShownCount', val);
+    }
 
     document.addEventListener("turbolinks:load", function() {
 
@@ -65,9 +63,9 @@ $(document).ready(function(){
             var iOSLink = 'https://itunes.apple.com/app/id1096670541';
             var androidLink = 'https://play.google.com/store/apps/details?id=com.fitnessmobileapps.flightperformanceandfitness&hl=en';
             if (/Android/i.test(navigator.userAgent)) {
-                $("a.flight-app-link").attr("href", androidLink)
+                $("a.flight-app-link").attr("href", androidLink);
             } else {
-                $("a.flight-app-link").attr("href", iOSLink)
+                $("a.flight-app-link").attr("href", iOSLink);
             }
 
             $('#stripe-submit-button').on('click', function(event) {

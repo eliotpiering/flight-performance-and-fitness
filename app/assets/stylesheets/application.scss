@@ -205,15 +205,15 @@ body {
 .truncate-content {
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 30em;
+    max-height: 30em;
 }
 .truncate-content:after{
     content:"";
     height: 1.5em;
     display: block;
-    width: 100%;
+    width: 90%;
     position:absolute;
-    background-color:white;
+    background-color:#f8f9fa;
     opacity: 0.8;
-    bottom: -0.4em
+    bottom: -0.4em;
 }

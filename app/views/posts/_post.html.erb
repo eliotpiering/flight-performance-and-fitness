@@ -1,15 +1,13 @@
-<div class="row mt-5 mb-5">
+<div class="row my-md-4 p-2 bg-light">
     <div class="col">
         <h3><%= post.title %></h3>
         <% if post.published_at %>
-          <label>Published <%= local_time(post.published_at) %></label>
+          <p class="m-1">Published <%= local_time(post.published_at) %></p>
         <% end %>
+        <p class="m-1"><strong>Authored By: </strong><%= post.author.name %></p>
         <%= render partial: 'post_tags', locals: {post: post} %>
         <div class="trix-content">
             <%= raw post.post_body %>
-        </div>
-        <div class="mt-2 post-footer">
-            <p><strong>Authored By: </strong><%= post.author.name %></p>
         </div>
     </div>
 </div>
