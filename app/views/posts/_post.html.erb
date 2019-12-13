@@ -1,8 +1,9 @@
 <div class="row mt-5 mb-5">
     <div class="col">
-        <h3>
-            <%= post.title %>
-        </h3>
+        <h3><%= post.title %></h3>
+        <% if post.published_at %>
+          <label>Published <%= local_time(post.published_at) %></label>
+        <% end %>
         <%= render partial: 'post_tags', locals: {post: post} %>
         <div class="trix-content">
             <%= raw post.post_body %>

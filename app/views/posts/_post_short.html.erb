@@ -1,7 +1,8 @@
 <div class="col-12">
-    <h3>
-        <%= link_to post.title, post_path(post) %>
-    </h3>
+    <h3><%= link_to post.title, post_path(post) %></h3>
+    <% if post.published_at %>
+        <label>Published <%= local_time(post.published_at) %></label>
+    <% end %>
     <%= render partial: 'post_tags', locals: {post: post} %>
     <div class="trix-content truncate-content">
         <%= raw post.post_body %>

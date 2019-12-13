@@ -20,6 +20,7 @@
 //= require bootstrap-sprockets
 //= require tempusdominus-bootstrap-4
 //= require trix
+//= require local-time
 //= require_tree .
 
 // variables for showing sign up modal

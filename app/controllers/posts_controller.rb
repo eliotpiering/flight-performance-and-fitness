@@ -9,6 +9,7 @@ class PostsController < ApplicationController
       @posts = Post.all.published
     end
     @posts = @posts.paginate(page: params[:page], per_page: 5)
+    @posts = @posts.order(published_at: :desc)
   end
 
   def show

@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
   before_validation :set_slug
+  before_save :set_published_at
 
   has_many_attached :post_medias
   has_many :post_tags
@@ -21,5 +22,11 @@ class Post < ApplicationRecord
     return if self.slug.present?
     slug = self.title.downcase.gsub(" ", "-")
     self.slug = CGI.escape(slug)
+  end
+
+  def set_published_at
+    return if self.published_at.present?
+    return unless self.changes[:published] == [false, true]
+    self.published_at = DateTime.now
   end
 end
