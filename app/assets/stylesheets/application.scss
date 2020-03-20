@@ -22,6 +22,10 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+.text-blue {
+  color: $primary;
+}
+
 #slogan {
     position: static;
     padding: 25px;
@@ -136,7 +140,7 @@ body {
 /*     background-size: cover; */
 /* } */
 .legend {
-  
+
     text-align: right;
 }
 .legend-item {

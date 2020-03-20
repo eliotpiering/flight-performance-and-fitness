@@ -25,7 +25,7 @@
 
 // variables for showing sign up modal
 // These are defined outside the turbolinks load so they last across the session
-$(document).ready(function(){
+$(document).ready(function() {
     var showModalTimeout = null;
     var HEIGHT_TO_SHOW = 400;
     var MAX_TIMES_SHOWN_PER_SESSION = 2;
@@ -35,13 +35,15 @@ $(document).ready(function(){
     function getTimesShownPerPage() {
         return timesShownPerPage;
     }
+
     function setTimesShownPerPage(val) {
         timesShownPerPage = val;
     }
 
     function getTimesShownPerSession() {
-        return parseInt(sessionStorage.getItem( 'popupShownCount' )) || 0;
+        return parseInt(sessionStorage.getItem('popupShownCount')) || 0;
     }
+
     function setTimesShownPerSession(val) {
         sessionStorage.setItem('popupShownCount', val);
     }
@@ -50,7 +52,7 @@ $(document).ready(function(){
 
         setTimesShownPerPage(0); // put this here for resetting the show eval modal everytime we change the page
 
-        $(document).ready(function(){
+        $(document).ready(function() {
             $("#image-slider").slick({
                 dots: true,
                 speed: 1000,
@@ -74,8 +76,16 @@ $(document).ready(function(){
                     $form = $button.parents('form');
                 var opts = $.extend({}, $button.data(), {
                     token: function(result) {
-                        $form.append($('<input>').attr({ type: 'hidden', name: 'stripeToken', value: result.id }));
-                        $form.append($('<input>').attr({ type: 'hidden', name: 'stripeEmail', value: result.email }));
+                        $form.append($('<input>').attr({
+                            type: 'hidden',
+                            name: 'stripeToken',
+                            value: result.id
+                        }));
+                        $form.append($('<input>').attr({
+                            type: 'hidden',
+                            name: 'stripeEmail',
+                            value: result.email
+                        }));
                         $form.submit();
                     }
                 });
@@ -91,19 +101,20 @@ $(document).ready(function(){
                 setTimesShownPerPage(getTimesShownPerPage() + 1);
                 clearTimeout(showModalTimeout);
             });
-            $(window).scroll(function () {
+            $(window).scroll(function() {
                 if (!showModalTimeout) {
-                    showModalTimeout = setTimeout(function () {
+                    showModalTimeout = setTimeout(function() {
                         clearTimeout(showModalTimeout);
                         showModalTimeout = null;
                         currentPage = window.location.pathname;
-                        var showModal = $(window).scrollTop() >= HEIGHT_TO_SHOW
-                            && currentPage !== "/evaluation"
-                            && currentPage !== "/calendar"
-                            && currentPage !== "/privacy"
-                            && getTimesShownPerPage() < MAX_TIMES_SHOWN_PER_PAGE
-                            && getTimesShownPerSession() < MAX_TIMES_SHOWN_PER_SESSION
-                            && $("#user-logged-in").length === 0;
+                        var showModal = $(window).scrollTop() >= HEIGHT_TO_SHOW &&
+                            currentPage !== "/evaluation" &&
+                            currentPage !== "/calendar" &&
+                            currentPage !== "/privacy" &&
+                            currentPage !== "/in-home-workout" &&
+                            getTimesShownPerPage() < MAX_TIMES_SHOWN_PER_PAGE &&
+                            getTimesShownPerSession() < MAX_TIMES_SHOWN_PER_SESSION &&
+                            $("#user-logged-in").length === 0;
 
                         if (showModal) {
                             $("#sign-up-modal").modal('show');

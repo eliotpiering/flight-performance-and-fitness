@@ -28,6 +28,9 @@ class ApplicationController < ActionController::Base
   def privacy
   end
 
+  def coronavirus
+  end
+
 
   private
 
