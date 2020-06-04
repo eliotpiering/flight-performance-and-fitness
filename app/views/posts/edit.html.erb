@@ -1,4 +1,5 @@
 <div class="container">
+    <%= render partial: "shared/admin_row" %>
     <% if @post.errors.any? %>
         <div class="mt-2 alert alert-warning alert-dismissible fade show" role="alert">
             <h4><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h4>

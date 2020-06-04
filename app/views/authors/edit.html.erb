@@ -1,0 +1,23 @@
+<div class="container">
+    <% if @author.errors.any? %>
+        <div class="mt-2 alert alert-warning alert-dismissible fade show" role="alert">
+            <h4><%= pluralize(@author.errors.count, "error") %> prohibited this author from being saved:</h4>
+            <ul>
+                <% @author.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    <div class="row mt-5 mb-5">
+      <div class="col">
+        <%= form_for @author do |f| %>
+            <div class="form-group">
+                <%= f.label :name %>
+                <%= f.text_field :name, class: "form-control"%>
+            </div>
+            <%= f.submit %>
+        <% end %>
+      </div>
+   </div>
+</div>

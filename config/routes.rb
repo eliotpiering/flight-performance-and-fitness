@@ -23,6 +23,8 @@ Rails.application.routes.draw do
 
   post 'charges/:event_id', to: 'charges#create', as: 'charges'
 
+  resources :authors, only: [:index, :new, :create, :edit, :update, :destroy]
+
   resources :posts do
     put 'toggle_publish', on: :member
     resources :post_tags, only: [:create, :destroy]

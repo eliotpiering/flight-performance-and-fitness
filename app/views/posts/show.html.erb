@@ -1,4 +1,5 @@
 <div class="container">
+    <%= render partial: "shared/admin_row" %>
     <%= render partial: 'post', locals: { post: @post } %>
     <% if user_signed_in? %>
       <%= render partial: 'post_admin_info', locals: { post: @post } %>
