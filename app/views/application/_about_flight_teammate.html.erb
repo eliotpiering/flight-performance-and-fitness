@@ -1,0 +1,16 @@
+<div class="col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h4><%= name %></h4>
+    </div>
+    <div class="card-body">
+      <img class="card-img-top img-fluid" src="<%= asset_path(img_name) %>" alt="<%= name %>">
+      <% if credentials %>
+        <p><%= credentials.html_safe %></p>
+      <% end %>
+      <p class="card-text">
+        <%= about %>
+      </p>
+    </div>
+  </div>
+</div>

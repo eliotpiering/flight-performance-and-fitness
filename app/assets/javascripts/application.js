@@ -112,6 +112,7 @@ $(document).ready(function() {
                             currentPage !== "/calendar" &&
                             currentPage !== "/privacy" &&
                             currentPage !== "/in-home-workout" &&
+                            currentPage !== "/remote_programming" &&
                             getTimesShownPerPage() < MAX_TIMES_SHOWN_PER_PAGE &&
                             getTimesShownPerSession() < MAX_TIMES_SHOWN_PER_SESSION &&
                             $("#user-logged-in").length === 0;

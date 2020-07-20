@@ -1,98 +1,38 @@
 <div class="container">
-    <!-- <div class="row mt-5 mb-5"> -->
-    <!-- <div class="col-12"> -->
-    <!-- <h1>About Flight</h1> -->
     <!-- </div> -->
     <!-- </div> -->
     <!-- <div class="row mt-5 mb-5"> -->
     <!-- <div class="col-12"> -->
     <!-- <p>At Flight, we don't believe in a one size fits all fitness program. Every person's fitness goals and ability is different. Whether you are a seasoned athlete or completely new to working out, we can serve your needs. Our goal is to build our clients mental and physical strength to take on all the obstacles between them and their goals.</p> -->
     <!-- </div> -->
-    <!-- </div><!--  --> 
+    <!-- </div><!--  -->
 
+  <!-- MISSIONS STATEMENT -->
+  <!-- The Team -->
 
-    <div class="row mt-5 mb-5 text-center">
-        <div class="col">
-            <h2>Owners - Jared and Dylan</h2>
-            <img class="img-fluid" src="<%= asset_path("dylan-and-jared-3.jpg") %>" alt="Dylan Gutheil and Jared Collinson" />
-        </div>
+  <div class="row mt-2 mb-2">
+    <div class="col-12">
+      <h2>About Flight</h2>
+      <p>
+      Our mission is to build an environment where people can push towards their personal goals with the value of coaching at a reasonable price. We have a true passion to help people get stronger both physically and mentally.  It is our aim to have every client that walks through our door fall in love with training and the process of bettering themselves because we know that the lessons you learn in the gym will carry over into every facet of your life.
+      </p>
     </div>
+  </div>
+  <div class="row mt-2 mb-2">
+      <div class="col">
+          <h3>The Team</h3>
+      </div>
+  </div>
 
-    <div class="row">
-        <div class="col text-center">
-            <h3>Coaches</h3>
-        </div>
-    </div>
+  <div class="card-deck row">
+    <%= render partial: "about_flight_teammate", locals: {name: "Dylan Gutheil", img_name: "Dylan-Head-Shot-3.jpeg", credentials: "Credentials: <strong>CSCS, Pn1</strong>", about: "Dylan grew up in Brookline, Massachusetts. Passionate about sports since childhood, Dylan played football and rugby in high school and continued his rugby career at Springfield College, where he earned a degree in Exercise Science. After college, he dedicated himself to the field of strength and conditioning. Dylan has extensive expertise in the science of human movement, exercise physiology, and biomechanics, and he enjoys working with clients of all ages and skill levels."} %>
+    <%= render partial: "about_flight_teammate", locals: {name: "Jared Collinson", img_name: "Jared-Head-Shot-2.jpg", credentials: "Credentials: <strong>CSCS</strong>", about: "Jared grew up in Sandwich, Massachusetts, where he played soccer and football through high school. He started playing rugby at Springfield College, where he earned a degree in Exercise Science. He continues to play rugby at a professional level, competing internationally. Jared’s enthusiasm for fitness and training is matched by his professional experience working in physical therapy clinics, strength and conditioning facilities, and sports clubs."} %>
+  </div>
 
-
-    <div class="card-deck mb-5">
-        <div class="card">
-            <div class="card-block">
-                <img class="card-img-top img-fluid" src="<%= asset_path("jared-collinson.jpg") %>" alt="Jared Collinson">
-                <h4 class="card-title pt-3 pb-3">Jared Collinson</h4>
-                <p>Credentials: <b>CSCS</b></p>
-                <p class="lead card-text">
-                    Jared grew up in Sandwich, Massachusetts, where he played soccer and football through high school. He started playing rugby at Springfield College, where he earned a degree in Exercise Science. He continues to play rugby at a professional level, competing internationally. Jared’s enthusiasm for fitness and training is matched by his professional experience working in physical therapy clinics, strength and conditioning facilities, and sports clubs.
-                </p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-block">
-                <img class="card-img-top img-fluid" src="<%= asset_path("dylan-gutheil.jpg") %>" alt="Dylan Gutheil">
-                <h4 class="card-title pt-3 pb-3">Dylan Gutheil</h4>
-                <p>Credentials: <b>CSCS, Pn1</b></p>
-
-                <p class="lead card-text">
-                    Dylan grew up in Brookline, Massachusetts. Passionate about sports since childhood, Dylan played football and rugby in high school and continued his rugby career at Springfield College, where he earned a degree in Exercise Science. After college, he dedicated himself to the field of strength and conditioning. Dylan has extensive expertise in the science of human movement, exercise physiology, and biomechanics, and he enjoys working with clients of all ages and skill levels.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="card-deck mb-5">
-        <div class="card">
-            <img class="card-img-top img-fluid" src="<%= asset_path("vini.jpg") %>" alt="Vini">
-        <div class="card-block">
-            <h4 class="card-title pt-3 pb-3">Vini</h4>
-            <p class="lead card-text">
-                Vini grew up in Cambridge, Ma., his journey into athletics began at the age of 4 where he played various sports, 3 or 4 seasons of every year from then on. After finding collegiate rugby at Springfield College in 2009, he decided to dedicate more time to the craft of exercise science and physiology, in order to take rugby to the International level. During this journey he earned a degree in Psychology and became well equipped as a Personal Trainer, working for one of the largest commercial gyms in the Boston area from 2012-2018. He is passionate about sharing knowledge, elite movement and performance, and working with clients of all levels. 
-            </p>
-        </div>
-        </div>
-
-        <div class="card">
-            <img class="card-img-top img-fluid" src="<%= asset_path("alex.jpg") %>" alt="Alex Hubelbank">
-            <div class="card-block">
-                <h4 class="card-title pt-3 pb-3">Alex Hubelbank</h4>
-                <p>Credentials: <b>ATC CPT Pn1</b></p>
-                <p class="lead card-text">
-                    Alex has been a part of FlightFam since the beginning as a member and now our newest coach. She played collegiate rugby alongside our very own Dee Nash at Boston University where she graduated with a degree in Athletic Training. When Alex isn’t coaching she can be found deadlifting in doughnut socks, searching for the world’s best doughnut, playing soccer, or coming up with a new concoction in the kitchen.
-                </p>
-            </div>
-        </div>
-
-    </div>
-    <div class="card-deck mb-5">
-        <div class="card">
-            <img class="card-img-top img-fluid" src="<%= asset_path("matt.jpg") %>" alt="Matt Crush">
-        <div class="card-block">
-            <h4 class="card-title pt-3 pb-3">Matt Crush</h4>
-            <p>Credentials: <b>CSCS</b></p>
-            <p class="lead card-text">
-                Matt grew up in Andover MA where he played football and helped start the rugby team. He went on to UMass Amherst where he continued rugby and received his degree in Kinesiology. Matt has worked with a variety of teams including UMass Strength & Conditioning as well as with the USA Men’s Rugby 7s in California. Matt enjoys eating steak and lifting things.
-                </p>
-                </div>
-        </div>
-
-        <div class="card">
-            <img class="card-img-top img-fluid" src="<%= asset_path("mike_anderson.jpg") %>" alt="Mike Anderson">
-            <div class="card-block">
-                <h4 class="card-title pt-3 pb-3">Mike Anderson</h4>
-                <p>Credentials: <b>MS, ATC</b></p>
-                <p class="lead card-text">
-                    Mike grew up in Salem, NH and moved to Boston to study Athletic Training at Boston University. Upon graduation Mike completed an internship with the New England Patriots before working as an athletic trainer at Northeastern University with the basketball, soccer, and track teams. While at Northeastern he earned a M.S. in Applied Nutrition with a concentration is sports and fitness. Mike currently works with the Holy Cross Football and Men’s Lacrosse teams. Mike is passionate about teaching proper movements patterns, wellness strategies, and increasing athletic performance.
-                </p>
-            </div>
-        </div>
-
-    </div>
+  <div class="card-deck mb-5 row">
+    <%= render partial: "about_flight_teammate", locals: {name: "Vini", img_name: "Vini-Head-Shot-2.jpg", credentials: nil, about: "Vini grew up in Cambridge, Ma., his journey into athletics began at the age of 4 where he played various sports, 3 or 4 seasons of every year from then on. After finding collegiate rugby at Springfield College in 2009, he decided to dedicate more time to the craft of exercise science and physiology, in order to take rugby to the International level. During this journey he earned a degree in Psychology and became well equipped as a Personal Trainer, working for one of the largest commercial gyms in the Boston area from 2012-2018. He is passionate about sharing knowledge, elite movement and performance, and working with clients of all levels."} %>
+    <%= render partial: "about_flight_teammate", locals: {name: "Amber", img_name: "Amber-Head-Shot-2.jpg", credentials: nil, about: "Amber grew up in Windham, Maine and moved to Boston to attend Simmons College where she played soccer and lacrosse while studying for her Exercise Science degree. After graduating, Amber went on to work as a personal trainer while developing her knowledge around biomechanics, programming, and psychology. Amber’s passion for sports and training was born when she began playing soccer at the age of 4 and has only grown since. She currently competes as a powerlifter and considers herself an avid hiker. Her two favorite hikes thus far are Franconia Ridge and Mt. Washington in the dead of winter."} %>
+    <%= render partial: "about_flight_teammate", locals: {name: "Mike Anderson", img_name: "mike_anderson.jpg", credentials: "Credentials: <strong>MS, ATC</strong>", about: "Mike grew up in Salem, NH and moved to Boston to study Athletic Training at Boston University. Upon graduation Mike completed an internship with the New England Patriots before working as an athletic trainer at Northeastern University with the basketball, soccer, and track teams. While at Northeastern he earned a M.S. in Applied Nutrition with a concentration is sports and fitness. Mike currently works with the Holy Cross Football and Men’s Lacrosse teams. Mike is passionate about teaching proper movements patterns, wellness strategies, and increasing athletic performance."} %>
+    <%= render partial: "about_flight_teammate", locals: {name: "Alex Hubelbank", img_name: "alex.jpg", credentials: "Credentials: <strong>ATC CPT Pn1</strong>", about: "Alex has been a part of FlightFam since the beginning as a member and now our newest coach. She played collegiate rugby alongside our very own Dee Nash at Boston University where she graduated with a degree in Athletic Training. When Alex isn’t coaching she can be found deadlifting in doughnut socks, searching for the world’s best doughnut, playing soccer, or coming up with a new concoction in the kitchen."} %>
+  </div>
 </div>
