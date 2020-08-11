@@ -6,7 +6,7 @@
         </div>
     </div>
     <div class="col-12">
-        <%= calendar number_of_days: 7, events: @schedule do |date, events| %>
+        <%= calendar number_of_days: 6, events: @schedule do |date, events| %>
             <ul class="day-list">
                 <% events.each do |event| %>
                     <li class="event-item <%= event.class_name %>" data-duration="<%= event.duration %>" data-toggle="tooltip" data-placement="top" title="<%= event.description %>" data-overlap="<%= event.overlap %>">
