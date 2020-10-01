@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   get 'about', to: 'application#about'
+  get 'covid', to: 'application#covid'
   get 'evaluation', to: 'application#evaluation'
   get 'services', to: 'application#services'
   get 'contact', to: 'application#contact'

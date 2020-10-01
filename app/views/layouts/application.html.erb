@@ -50,6 +50,14 @@
                     <a class="flight-app-link" href='#' class="text-white" target="_blank"><%= fa_icon 'mobile' %></a>
                 </div>
             </div>
+            <% if current_page?(root_path) %>
+                <div class="alert alert-warning alert dismissible text-center" role="alert">
+                <%= link_to  "View Our COVID-19 Policies", covid_path %>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <% end %>
             <nav class="container navbar navbar-toggleable-md navbar-expand-lg navbar-dark bg-dark">
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -75,8 +83,11 @@
                     </ul>
                 </div>
             </nav>
+
         </section>
+
         <section id="main">
+
             <% if notice %>
                 <div class="alert alert-primary alert-dismissible fade show" role="alert">
                     <%= notice %>
@@ -104,6 +115,10 @@
                         <!-- <a class="flight-app-link nounderline text-white" href="#" target="_blank"><span class="font-weight-bold"> Download our app &nbsp <%= fa_icon 'mobile' %></span></a><BR> -->
                         <p>
                           <%= link_to  "Privacy Policy", privacy_path%>
+                        </p>
+
+                        <p>
+                          <%= link_to  "COVID-19 Policy", covid_path%>
                         </p>
 
                         © 2017 FLIGHT PREFORMANCE & FITNESS

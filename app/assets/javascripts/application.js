@@ -113,6 +113,7 @@ $(document).ready(function() {
                             currentPage !== "/privacy" &&
                             currentPage !== "/in-home-workout" &&
                             currentPage !== "/remote_programming" &&
+                            currentPage !== "/covid" &&
                             getTimesShownPerPage() < MAX_TIMES_SHOWN_PER_PAGE &&
                             getTimesShownPerSession() < MAX_TIMES_SHOWN_PER_SESSION &&
                             $("#user-logged-in").length === 0;
