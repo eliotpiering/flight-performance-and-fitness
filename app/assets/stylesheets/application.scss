@@ -40,7 +40,7 @@ body {
 @include media-breakpoint-up(lg) {
     #slogan {
         position: absolute;
-        top: 160px;
+        top: 210px;
         left: 10%;
         padding: 25px;
         opacity: 0.8;
@@ -245,4 +245,12 @@ body {
   ul {
     padding-left: 1rem;
   }
+}
+
+
+.covid-alert {
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 0.3rem 1.25rem;
+    border-radius: 0px;
 }

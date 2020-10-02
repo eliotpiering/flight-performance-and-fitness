@@ -51,11 +51,8 @@
                 </div>
             </div>
             <% if current_page?(root_path) %>
-                <div class="alert alert-warning alert dismissible text-center" role="alert">
-                <%= link_to  "View Our COVID-19 Policies", covid_path %>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                <div class="covid-alert alert alert-warning alert text-center" role="alert">
+                  <%= link_to  "View Our COVID-19 Policies", covid_path %>
                 </div>
             <% end %>
             <nav class="container navbar navbar-toggleable-md navbar-expand-lg navbar-dark bg-dark">
