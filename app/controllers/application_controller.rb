@@ -21,8 +21,12 @@ class ApplicationController < ActionController::Base
   end
 
   def submit_evaluation
-    RegisterMailer.free_eval(register_params).deliver_now
-    RegisterMailer.confirm(register_params).deliver_now
+    if robot?
+      logger.warn "NEW SPAMMER: #{register_params.slice(:name, :email).to_json}"
+    else
+      RegisterMailer.free_eval(register_params).deliver_now
+      RegisterMailer.confirm(register_params).deliver_now
+    end
   end
 
   def privacy
@@ -31,8 +35,12 @@ class ApplicationController < ActionController::Base
   def coronavirus
   end
 
-
   private
+
+  def robot?
+    params[:my_unique_email_confirmation].present?
+  end
+
 
   def register_params
     params.permit(:name, :email, :goals, :experience, :age, :injury_history, :how_did_you_hear_about_us, times: {})

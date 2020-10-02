@@ -66,6 +66,12 @@
                     <%= f.text_field "[times][3]", class: "form-control form-control-lg datetimepicker-input", data: {toggle: "datetimepicker", target:"#datetimepicker#{3}"}, id: "datetimepicker#{3}", required: false %>
                   </div>
                 </div>
+                <div class="row email-confirmation">
+                    <div class="col-md-4 col-sm-12">
+                        <label>Email Confirmation</label>
+                        <%= f.text_field "my_unique_email_confirmation", class: "form-control form-control-lg", placeholder: "If you fill this in, this form won't be submitted." %>
+                    </div>
+                </div>
                 <div class="row mt-5 mb-5">
                     <div class="col text-center">
                         <%= f.submit "Sign up", class: "btn btn-primary" %>

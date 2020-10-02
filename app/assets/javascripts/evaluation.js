@@ -9,4 +9,7 @@ document.addEventListener("turbolinks:load", function() {
         useCurrent: false,
         minDate: minDate
     });
+
+    // MY HONEYPOT
+    $(".email-confirmation").hide()
 });
