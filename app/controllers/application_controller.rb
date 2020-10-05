@@ -35,6 +35,9 @@ class ApplicationController < ActionController::Base
   def coronavirus
   end
 
+  def internship
+  end
+
   private
 
   def robot?

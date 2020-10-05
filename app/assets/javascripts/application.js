@@ -114,6 +114,7 @@ $(document).ready(function() {
                             currentPage !== "/in-home-workout" &&
                             currentPage !== "/remote_programming" &&
                             currentPage !== "/covid" &&
+                            currentPage !== "/internship" &&
                             getTimesShownPerPage() < MAX_TIMES_SHOWN_PER_PAGE &&
                             getTimesShownPerSession() < MAX_TIMES_SHOWN_PER_SESSION &&
                             $("#user-logged-in").length === 0;

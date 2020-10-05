@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get 'in-home-workout', to: 'application#coronavirus'
   post 'oembed', to: 'oembed#create'
   get 'remote_programming', to: 'application#remote_programming'
+  get 'internship', to: 'application#internship'
 
   post 'charges/:event_id', to: 'charges#create', as: 'charges'
 
