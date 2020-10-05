@@ -86,16 +86,6 @@
       </div>
   </div>
   <div class="row">
-      <h3>Former Flight Interns talk about their experience</h3>
-      <div class="col-12">
-          <%= video_tag "video-compressed.mp4", controls: true, preload: 'metadata', poster: image_path("internship-screenshot-1.jpg") %>
-      </div>
-      <div class="col-12">
-          <%= video_tag "barak-internship-interview.mp4", controls: true, preload: 'metadata', poster: image_path("barak-interview-screenshot.jpg") %>
-      </div>
-  </div>
-
-  <div class="row">
       <div class="col">
           <h3>Requirements</h3>
           <ul>
@@ -140,11 +130,32 @@
   </div>
 
 
-  <div class="row mb-5">
+  <div class="row">
       <div class="col">
           <a href="#"><button class="btn btn-primary">Apply Today</button></a>
       </div>
   </div>
 
+  <div class="row  mb-5">
+      <h3>Former Flight Interns talk about their experience</h3>
+      <div class="col-12">
+      <h4>BK</h4>
+      </div>
+      <div class="col-12">
+          <%= video_tag "video-compressed.mp4", controls: true, preload: 'metadata', poster: image_path("internship-screenshot-1.jpg") %>
+      </div>
+      <div class="col-12">
+        <h4>Barak</h4>
+      </div>
+      <div class="col-12">
+          <h5>Part 1</h5>
+          <%= video_tag "barak-internship-compressed-part-1.mp4", controls: true, preload: 'metadata', poster: image_path("barak-interview-screenshot.jpg") %>
+      </div>
+      <div class="col-12">
+          <h5>Part 2</h5>
+          <%= video_tag "barak-internship-compressed-part-2.mp4", controls: true, preload: 'metadata', poster: image_path("barak-interview-screenshot-part-2.jpg") %>
+      </div>
+      </div>
+  </div>
 
 </div>
