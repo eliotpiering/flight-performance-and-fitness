@@ -13,7 +13,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.3'
+gem 'rails', github: 'rails/rails'
 # Use postgresql as the database for Active Record
 gem 'puma', '3.8.2'
 
@@ -50,6 +50,9 @@ gem 'bootstrap4-datetime-picker-rails'
 gem 'momentjs-rails'
 
 gem "aws-sdk-s3", require: false
+
+#FIXME Remove this once on not edge versio of rails
+gem 'coffee-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

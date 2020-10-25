@@ -3,8 +3,16 @@
     <div class="btn-group" role="group" aria-label="Basic example">
       <%= link_to "New Author", new_author_path, class: "btn btn-primary" %>
       <%= link_to "Author List", authors_path, class: "btn btn-primary" %>
-      <%= link_to "New Post", posts_path, method: :post, class:"btn btn-primary" %>
       <%= link_to "Post List", posts_path, class:"btn btn-primary" %>
     </div>
   </div>
+  <hr>
+  <div class="row m-2">
+      <%= form_with model: Post.new, method: :post do |f| %>
+        <%= f.label :title %>
+        <%= f.text_field :title, required: true %>
+        <%= f.submit "New Post", class: "btn btn-primary" %>
+      <% end %>
+  </div>
+
 <% end %>

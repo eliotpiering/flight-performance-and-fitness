@@ -1,15 +1,25 @@
-local:
-  service: Disk
-  root: <%= Rails.root.join("storage") %>
- 
 test:
   service: Disk
   root: <%= Rails.root.join("tmp/storage") %>
- 
+
+local:
+  service: Disk
+  root: <%= Rails.root.join("storage") %>
+
 digital_ocean:
   service: S3
   access_key_id: <%= ENV.fetch("DO_ACCESS_KEY") %>
   secret_access_key: <%= ENV.fetch("DO_SECRET") %>
+  region: nyc3
+  bucket: ep-files
+  endpoint: "https://nyc3.digitaloceanspaces.com"
+
+
+digital_ocean_public:
+  service: publicS3
+  access_key_id: <%= ENV.fetch("DO_ACCESS_KEY") %>
+  secret_access_key: <%= ENV.fetch("DO_SECRET") %>
+  public: true
   region: nyc3
   bucket: ep-files
   endpoint: "https://nyc3.digitaloceanspaces.com"

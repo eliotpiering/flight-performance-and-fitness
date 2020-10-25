@@ -17,7 +17,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Post.new
+    post = Post.new(post_params)
     post.save!(validate: false)
     redirect_to edit_post_path(post)
   end
