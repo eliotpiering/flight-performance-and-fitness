@@ -109,6 +109,5 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'flightperformanceandfitness.com', port: 80 }
 
 
-  #TODO switch this to use s3 in the future
-  config.active_storage.service = :local
+  config.active_storage.service = :digital_ocean
 end
