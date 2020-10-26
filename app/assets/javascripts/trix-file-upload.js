@@ -38,7 +38,7 @@
                 console.log(data)
                 var attributes = {
                     url: data.url,
-                    href: data.url + "content-disposition=attachment"
+                    href: data.url + "?content-disposition=attachment"
                 }
                 successCallback(attributes)
             }

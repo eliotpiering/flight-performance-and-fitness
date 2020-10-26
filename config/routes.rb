@@ -36,4 +36,12 @@ Rails.application.routes.draw do
   post 'post_medias', to: 'post_medias#create'
 
   root to: 'application#index'
+
+  direct :rails_public_blob do |blob|
+    if Rails.env.test?
+      route_for(:rails_blob, blob)
+    else
+      File.join(ENV.fetch("DO_CDN_PATH"), blob.key)
+    end
+  end
 end

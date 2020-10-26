@@ -16,7 +16,7 @@ digital_ocean:
 
 
 digital_ocean_public:
-  service: publicS3
+  service: S3
   access_key_id: <%= ENV.fetch("DO_ACCESS_KEY") %>
   secret_access_key: <%= ENV.fetch("DO_SECRET") %>
   public: true

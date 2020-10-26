@@ -3,7 +3,7 @@ class Post < ApplicationRecord
   before_validation :set_slug
   before_save :set_published_at
 
-  POST_MEDIA_SERVICE = :digital_ocean
+  POST_MEDIA_SERVICE = :digital_ocean_public
   has_many_attached :post_medias, service: POST_MEDIA_SERVICE
   has_many :post_tags
   has_many :tags, through: :post_tags
