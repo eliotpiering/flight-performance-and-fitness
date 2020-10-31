@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row mt-4 mb-4">
-    <div class="col-12">
-      <h1>Internship Program</h1>
+    <div class="col-12 text-center">
+      <h1>Flight Internship Program</h1>
     </div>
   </div>
   <div class="row">
@@ -25,6 +25,10 @@
               Our mission is to develop the next generation of coaches to positively influence the industry with their open minded
               attitude and furthering their education for the betterment of themselves and their clients.
           </p>
+          <p>
+            <a href="https://forms.gle/s9A6qvNj5fz3E2ho7" target="_blank">Apply Today</a>
+          </p>
+
       </div>
   </div>
 
@@ -105,9 +109,6 @@
       </div>
   </div>
 
-
-
-
   <div class="row">
       <div class="col">
           <h3>Non-Negotiables</h3>
@@ -128,31 +129,25 @@
       </div>
   </div>
 
-
-  <div class="row">
+  <div class="row mb-5">
       <div class="col">
-          <a href="#"><button class="btn btn-primary">Apply Today</button></a>
+          <h3>Apply Today</h3>
+          Submit your application to this <a target="_blank" href="https://forms.gle/s9A6qvNj5fz3E2ho7">google form</a>
       </div>
   </div>
 
   <div class="row  mb-5">
       <h3>Former Flight Interns talk about their experience</h3>
       <div class="col-12">
-      <h4>BK</h4>
+        <%= video_tag "https://ep-files.nyc3.cdn.digitaloceanspaces.com/video-compressed.mp4", controls: true, preload: 'metadata', poster: image_path("internship-screenshot-1.jpg") %>
       </div>
       <div class="col-12">
-          <%= video_tag "video-compressed.mp4", controls: true, preload: 'metadata', poster: image_path("internship-screenshot-1.jpg") %>
+        <h5>Part 1</h5>
+        <%= video_tag "https://ep-files.nyc3.cdn.digitaloceanspaces.com/barak-internship-compressed-part-1.mp4", controls: true, preload: 'metadata', poster: image_path("barak-interview-screenshot.jpg") %>
       </div>
       <div class="col-12">
-        <h4>Barak</h4>
-      </div>
-      <div class="col-12">
-          <h5>Part 1</h5>
-          <%= video_tag "barak-internship-compressed-part-1.mp4", controls: true, preload: 'metadata', poster: image_path("barak-interview-screenshot.jpg") %>
-      </div>
-      <div class="col-12">
-          <h5>Part 2</h5>
-          <%= video_tag "barak-internship-compressed-part-2.mp4", controls: true, preload: 'metadata', poster: image_path("barak-interview-screenshot-part-2.jpg") %>
+        <h5>Part 2</h5>
+        <%= video_tag "https://ep-files.nyc3.cdn.digitaloceanspaces.com/barak-internship-compressed-part-2.mp4", controls: true, preload: 'metadata', poster: image_path("barak-interview-screenshot.jpg") %>
       </div>
       </div>
   </div>
