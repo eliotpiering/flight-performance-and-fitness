@@ -21,9 +21,9 @@ set :default_env, {
   "PATH" => "$HOME/.nvm/versions/node/v12.16.1/bin:$PATH"
 }
 
-#after 'nvm:validate', 'nvm:webpacker:validate'
-#before 'deploy:assets:precompile', 'nvm:webpacker:wrap'
-#after 'deploy:assets:precompile', 'nvm:webpacker:unwrap'
+after 'nvm:validate', 'nvm:webpacker:validate'
+before 'deploy:assets:precompile', 'nvm:webpacker:wrap'
+after 'deploy:assets:precompile', 'nvm:webpacker:unwrap'
 
 
 
