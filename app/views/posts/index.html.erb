@@ -14,9 +14,6 @@
 
    <div class="row mb-5">
     <div class="col-12 text-center flickr_pagination">
-        <div class="page_info">
-            <%= page_entries_info @posts %>
-        </div>
         <%= will_paginate @posts, :container => false %>
     </div>
    </div>
