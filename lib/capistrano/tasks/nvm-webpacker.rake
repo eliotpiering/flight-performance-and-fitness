@@ -31,7 +31,7 @@ namespace :nvm do
     def nvm_prefix
       fetch(
         :nvm_prefix, -> {
-          "#{fetch(:tmp_dir)}/#{fetch(:application)}/nvm-exec.sh "
+          "$HOME/.nvm/versions/node/#{fetch(:nvm_node)}v12.16.1/bin/node"
         }
       )
     end
