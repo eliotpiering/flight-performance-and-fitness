@@ -13,8 +13,13 @@ set :rbenv_map_bins, %w{rake gem bundle ruby rails puma pumactl}
 set :rbenv_roles, :all
 
 set :nvm_type, :user # or :system, depends on your nvm setup
-set :nvm_node, 'v12.16.1'
 set :nvm_map_bins, %w{node npm yarn}
+
+set :nvm_node, 'v12.16.1'
+#https://github.com/koenpunt/capistrano-nvm/issues/25#issuecomment-320806448
+set :default_env, {
+  "PATH" => "$HOME/.nvm/versions/node/v12.16.1/bin:$PATH"
+}
 
 
 # Default branch is :master
