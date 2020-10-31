@@ -13,7 +13,7 @@ set :rbenv_map_bins, %w{rake gem bundle ruby rails puma pumactl}
 set :rbenv_roles, :all
 
 set :nvm_type, :user # or :system, depends on your nvm setup
-set :nvm_node, 'v12.16.0'
+set :nvm_node, 'v12.16.1'
 set :nvm_map_bins, %w{node npm yarn}
 
 
