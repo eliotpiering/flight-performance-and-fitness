@@ -25,8 +25,6 @@ after 'nvm:validate', 'nvm:webpacker:validate'
 before 'deploy:assets:precompile', 'nvm:webpacker:wrap'
 after 'deploy:assets:precompile', 'nvm:webpacker:unwrap'
 
-
-
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
