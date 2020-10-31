@@ -15,7 +15,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', github: 'rails/rails'
 # Use postgresql as the database for Active Record
-gem 'puma', '3.8.2'
+gem 'puma', '3.12.6'
 
 gem 'sqlite3'
 
