@@ -37,7 +37,6 @@ gem 'turbolinks', '~> 5'
 gem 'capistrano-rails', group: :development
 gem 'capistrano3-puma'
 gem 'capistrano-rbenv', '~> 2.1'
-gem 'capistrano-nvm', group: :development
 
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem', tag: "v4.3.1"
 gem 'jquery-rails'

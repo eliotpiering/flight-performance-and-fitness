@@ -20,7 +20,6 @@ require 'capistrano/rbenv'
 # install_plugin Capistrano::SCM::Svn
 # or
 require "capistrano/scm/git"
-require 'capistrano/nvm'
 
 install_plugin Capistrano::SCM::Git
 
