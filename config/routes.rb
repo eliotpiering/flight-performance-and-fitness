@@ -41,7 +41,7 @@ Rails.application.routes.draw do
     if Rails.env.test?
       route_for(:rails_blob, blob)
     else
-      File.join(ENV.fetch("DO_CDN_PATH"), blob.key)
+      File.join("https://ep-files.nyc3.cdn.digitaloceanspaces.com", blob.key)
     end
   end
 end
