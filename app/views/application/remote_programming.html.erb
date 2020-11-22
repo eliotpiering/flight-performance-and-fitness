@@ -38,18 +38,17 @@
         </div>
         <div class="card-body">
           <h1 class="card-title pricing-card-title">$20 <small class="text-muted">flat fee</small></h1>
-          <label class="lead">Template Program</label>
-          <p class="card-text">For anyone considering online programming or looking to see what we do here at Flight Performance & Fitness.</p>
-          <ul class="text-left">
-            <li>
-            Choose from a <a href="#/templates">variety of templates</a>
-            </li>
+          <h4>Template programs</h4>
+          <hr></hr>
+          <p>For anyone looking for a place to start</p>
+          <ul class="lead text-left">
+            <li> Choose from a <a href="#templates">variety of templates</a></li>
+            <li> Free Sample <%= link_to "template", asset_path("body_comp_program.zip"), download: "body-comp-program.zip" %></li>
           </ul>
           <!-- <p class="card-text text-left">Choose from a <a href="#/templates">variety of templates</a></p> -->
           <!-- <br/> -->
 
-          <%= link_to  %>
-          <a class="btn btn-secondary text-light">Download Sample Template</a>
+          <%= link_to "Download Sample Template", asset_path("body_comp_program.zip"), class: "btn btn-secondary text-light", download: "body-comp-program.zip" %>
         </div>
       </div>
       <div class="card mb-4 shadow-sm">
@@ -58,18 +57,14 @@
         </div>
         <div class="card-body text-center">
           <h1 class="card-title pricing-card-title">$75 <small class="text-muted">/mo</small></h1>
-          <label class="lead">Monthly Updated Programming</label>
-          <p>For anyone looking for a workout tailored to meet your individual goals.</p>
-          <ul class="text-left">
-            <li>Free initial consultation where we'll develop a custom plan tailered towards your personal goals.</li>
-            <li>Access to our online video database and social media accountability group.</li>
-            <li>Monthly progamming updates. Clients regularly report progress to allow the coach to make adjustments for the next program.</li>
+          <h4>Monthly Updates</h4>
+          <hr></hr>
+          <p>For people looking for a tailored workout to meet your individual goals.</p>
+          <ul class="lead text-left">
+            <li>Free initial consultation</li>
+            <li>Customized programs</li>
+            <li>Monthly progamming updates with a dedicated coach.</li>
           </ul>
-
-          <!-- <p class="card-text text-left">Free initial consultation where we'll develop a custom plan tailered towards your personal goals.</p>
-               <p class="card-text text-left">Access to our online video database and social media accountability group to acces resources and any additional information you may need.</p>
-               <p class="card-text text-left">Monthly progamming updates. Clients regularly report progress to allow the coach to make adjustments for the next program.</p>
-               </div> -->
         </div>
       </div>
       <div class="card mb-4 shadow-sm">
@@ -78,13 +73,13 @@
         </div>
         <div class="card-body text-center">
           <h1 class="card-title pricing-card-title">$140 <small class="text-muted">/mo</small></h1>
-          <label class="lead">Weekly Updated Programming</label>
+          <h4>Weekly Updates</h4>
+          <hr></hr>
           <p>For people who are truly dedicated to their training</p>
-          <ul class="text-left">
-            <li>Free initial consultation where we'll develop a custom plan tailered towards your personal goals.</li>
-            <li>Access to our online video database and social media accountability group.</li>
-            <li>Weekly progamming updates.</li>
-            <li>Unlited access to Flight coaches to all the coach who guide and adapt the program to fit your week to week needs</li>
+          <ul class="lead text-left">
+            <li>Free initial consultation</li>
+            <li>Customized programs</li>
+            <li>Weekly progamming updates with a dedicated coach.</li>
           </ul>
 
 
@@ -96,7 +91,7 @@
     </div>
 
 
-  <h2>Templates</h2>
+  <h2 id="templates">Templates</h2>
   <div class="row">
     <div class="card m-2 ">
       <div class="card-header">
