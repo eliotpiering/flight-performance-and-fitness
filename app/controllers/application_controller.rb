@@ -44,13 +44,11 @@ class ApplicationController < ActionController::Base
     params[:my_unique_email_confirmation].present?
   end
 
-
   def register_params
-    params.permit(:name, :email, :goals, :experience, :age, :injury_history, :how_did_you_hear_about_us, times: {})
+    params.permit(:name, :email, :why_flight, :goals, :experience, :age, :injury_history, :how_did_you_hear_about_us, :times_string, :stress_level, :fitness_level, :sleep_level, :nutritional_level, times: {})
   end
 
   def contact_params
     params.require(:contact).permit(:name, :email, :message)
   end
-
 end
