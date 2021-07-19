@@ -120,6 +120,7 @@ GEM
     aws-sigv4 (1.2.2)
       aws-eventstream (~> 1, >= 1.0.2)
     bcrypt (3.1.16)
+    bcrypt_pbkdf (1.1.0)
     bindex (0.8.1)
     bootstrap4-datetime-picker-rails (0.3.1)
       jquery-rails (~> 4.2, >= 4.2.0)
@@ -172,6 +173,7 @@ GEM
       devise (>= 4.6)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    ed25519 (1.2.4)
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.13.1)
@@ -324,6 +326,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk-s3
+  bcrypt_pbkdf (>= 1.0, < 2.0)
   bootstrap!
   bootstrap4-datetime-picker-rails
   byebug
@@ -334,6 +337,7 @@ DEPENDENCIES
   coffee-rails
   devise
   devise_invitable (~> 2.0.1)
+  ed25519 (>= 1.2, < 2.0)
   font-awesome-rails
   jquery-rails
   jquery-slick-rails
