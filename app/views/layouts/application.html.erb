@@ -69,10 +69,11 @@
                         <%= nav_link "Blog", posts_path %>
                         <%= nav_link "Contact", contact_path  %>
                         <%= nav_link "Services", services_path %>
+                        <%= nav_link "Remote Coaching", remote_coaching_path %>
                         <%= nav_link "About", about_path %>
                         <%#= nav_link "Events", events_path %>
                         <%= nav_link "Schedule", calendar_path %>
-                        <%= nav_link "Get Started", evaluation_path %>
+                        <%= nav_link "Free Eval", evaluation_path %>
                         <%= nav_link "Store", "https://teamlocker.squadlocker.com/#/lockers/flight-performance" %>
                         <% if user_signed_in? %>
                             <%= nav_link "Log Out", destroy_user_session_path, method: :delete, id: "user-logged-in" %>
@@ -110,10 +111,6 @@
                 <div class="col text-center text-white lead">
                     <p class="mt-2 mb-2">
                         <!-- <a class="flight-app-link nounderline text-white" href="#" target="_blank"><span class="font-weight-bold"> Download our app &nbsp <%= fa_icon 'mobile' %></span></a><BR> -->
-                        <p>
-                          <%= link_to  "Remote Coaching", remote_coaching_path%>
-                        </p>
-
                         <p>
                           <%= link_to  "Privacy Policy", privacy_path%>
                         </p>

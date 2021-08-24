@@ -25,106 +25,110 @@
 
 // variables for showing sign up modal
 // These are defined outside the turbolinks load so they last across the session
-$(document).ready(function() {
-    var showModalTimeout = null;
-    var HEIGHT_TO_SHOW = 400;
-    var MAX_TIMES_SHOWN_PER_SESSION = 2;
-    var MAX_TIMES_SHOWN_PER_PAGE = 1;
-    var timesShownPerPage = 0;
+$(document).ready(function () {
+  var showModalTimeout = null;
+  var HEIGHT_TO_SHOW = 400;
+  var MAX_TIMES_SHOWN_PER_SESSION = 1;
+  var MAX_TIMES_SHOWN_PER_PAGE = 1;
+  var timesShownPerPage = 0;
 
-    function getTimesShownPerPage() {
-        return timesShownPerPage;
-    }
+  function getTimesShownPerPage() {
+    return timesShownPerPage;
+  }
 
-    function setTimesShownPerPage(val) {
-        timesShownPerPage = val;
-    }
+  function setTimesShownPerPage(val) {
+    timesShownPerPage = val;
+  }
 
-    function getTimesShownPerSession() {
-        return parseInt(sessionStorage.getItem('popupShownCount')) || 0;
-    }
+  function getTimesShownPerSession() {
+    return parseInt(sessionStorage.getItem("popupShownCount")) || 0;
+  }
 
-    function setTimesShownPerSession(val) {
-        sessionStorage.setItem('popupShownCount', val);
-    }
+  function setTimesShownPerSession(val) {
+    sessionStorage.setItem("popupShownCount", val);
+  }
 
-    document.addEventListener("turbolinks:load", function() {
+  document.addEventListener("turbolinks:load", function () {
+    setTimesShownPerPage(0); // put this here for resetting the show eval modal everytime we change the page
 
-        setTimesShownPerPage(0); // put this here for resetting the show eval modal everytime we change the page
+    $(document).ready(function () {
+      $("#image-slider").slick({
+        dots: true,
+        speed: 1000,
+        mobileFirst: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        // adaptiveHeight: true
+      });
 
-        $(document).ready(function() {
-            $("#image-slider").slick({
-                dots: true,
-                speed: 1000,
-                mobileFirst: true,
-                autoplay: true,
-                autoplaySpeed: 2000
-                // adaptiveHeight: true
-            });
+      var iOSLink = "https://itunes.apple.com/app/id1096670541";
+      var androidLink =
+        "https://play.google.com/store/apps/details?id=com.fitnessmobileapps.flightperformanceandfitness&hl=en";
+      if (/Android/i.test(navigator.userAgent)) {
+        $("a.flight-app-link").attr("href", androidLink);
+      } else {
+        $("a.flight-app-link").attr("href", iOSLink);
+      }
 
-            var iOSLink = 'https://itunes.apple.com/app/id1096670541';
-            var androidLink = 'https://play.google.com/store/apps/details?id=com.fitnessmobileapps.flightperformanceandfitness&hl=en';
-            if (/Android/i.test(navigator.userAgent)) {
-                $("a.flight-app-link").attr("href", androidLink);
-            } else {
-                $("a.flight-app-link").attr("href", iOSLink);
-            }
-
-            $('#stripe-submit-button').on('click', function(event) {
-                event.preventDefault();
-                var $button = $(this),
-                    $form = $button.parents('form');
-                var opts = $.extend({}, $button.data(), {
-                    token: function(result) {
-                        $form.append($('<input>').attr({
-                            type: 'hidden',
-                            name: 'stripeToken',
-                            value: result.id
-                        }));
-                        $form.append($('<input>').attr({
-                            type: 'hidden',
-                            name: 'stripeEmail',
-                            value: result.email
-                        }));
-                        $form.submit();
-                    }
-                });
-                StripeCheckout.open(opts);
-            });
-
-            $('[data-toggle="tooltip"]').tooltip();
-
-
-            ////////// SHOW EVAL MODAL AFTER SCOLLING CERTAIN AMOUNT ///////////////
-            $("#sign-up-modal").on('hide.bs.modal', function() {
-                setTimesShownPerSession(getTimesShownPerSession() + 1);
-                setTimesShownPerPage(getTimesShownPerPage() + 1);
-                clearTimeout(showModalTimeout);
-            });
-            $(window).scroll(function() {
-                if (!showModalTimeout) {
-                    showModalTimeout = setTimeout(function() {
-                        clearTimeout(showModalTimeout);
-                        showModalTimeout = null;
-                        currentPage = window.location.pathname;
-                        var showModal = $(window).scrollTop() >= HEIGHT_TO_SHOW &&
-                            currentPage !== "/evaluation" &&
-                            currentPage !== "/calendar" &&
-                            currentPage !== "/privacy" &&
-                            currentPage !== "/in-home-workout" &&
-                            currentPage !== "/remote_programming" &&
-                            currentPage !== "/covid" &&
-                            currentPage !== "/internship" &&
-                            getTimesShownPerPage() < MAX_TIMES_SHOWN_PER_PAGE &&
-                            getTimesShownPerSession() < MAX_TIMES_SHOWN_PER_SESSION &&
-                            $("#user-logged-in").length === 0;
-
-                        if (showModal) {
-                            $("#sign-up-modal").modal('show');
-                        }
-                    }, 1000);
-                }
-            });
+      $("#stripe-submit-button").on("click", function (event) {
+        event.preventDefault();
+        var $button = $(this),
+          $form = $button.parents("form");
+        var opts = $.extend({}, $button.data(), {
+          token: function (result) {
+            $form.append(
+              $("<input>").attr({
+                type: "hidden",
+                name: "stripeToken",
+                value: result.id,
+              })
+            );
+            $form.append(
+              $("<input>").attr({
+                type: "hidden",
+                name: "stripeEmail",
+                value: result.email,
+              })
+            );
+            $form.submit();
+          },
         });
+        StripeCheckout.open(opts);
+      });
+
+      $('[data-toggle="tooltip"]').tooltip();
+
+      ////////// SHOW EVAL MODAL AFTER SCOLLING CERTAIN AMOUNT ///////////////
+      $("#sign-up-modal").on("hide.bs.modal", function () {
+        setTimesShownPerSession(getTimesShownPerSession() + 1);
+        setTimesShownPerPage(getTimesShownPerPage() + 1);
+        clearTimeout(showModalTimeout);
+      });
+      $(window).scroll(function () {
+        if (!showModalTimeout) {
+          showModalTimeout = setTimeout(function () {
+            clearTimeout(showModalTimeout);
+            showModalTimeout = null;
+            currentPage = window.location.pathname;
+            var showModal =
+              $(window).scrollTop() >= HEIGHT_TO_SHOW &&
+              currentPage !== "/evaluation" &&
+              currentPage !== "/calendar" &&
+              currentPage !== "/privacy" &&
+              currentPage !== "/in-home-workout" &&
+              currentPage !== "/remote_programming" &&
+              currentPage !== "/covid" &&
+              currentPage !== "/internship" &&
+              getTimesShownPerPage() < MAX_TIMES_SHOWN_PER_PAGE &&
+              getTimesShownPerSession() < MAX_TIMES_SHOWN_PER_SESSION &&
+              $("#user-logged-in").length === 0;
+
+            if (showModal) {
+              $("#sign-up-modal").modal("show");
+            }
+          }, 1000);
+        }
+      });
     });
+  });
 });
