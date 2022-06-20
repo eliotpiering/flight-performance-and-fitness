@@ -91,7 +91,7 @@ class Schedule
   end
 
   def self.conditioning(date, start_hour, duration = 1, options = {})
-    event("Strength & Conditioning", "Small group, boot camp style conditioning class in a fun team environment.", "conditioning", date, start_hour, duration, options)
+    event("Group Classes", "Small group, boot camp style conditioning class in a fun team environment.", "conditioning", date, start_hour, duration, options)
   end
 
   def self.personal_training(date, start_hour, duration = 1)
