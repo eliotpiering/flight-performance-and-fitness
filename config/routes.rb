@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get "remote_programming", to: "application#remote_programming"
   get "internship", to: "application#internship"
   get "remote_coaching", to: "application#remote_coaching"
+  get "nutrition", to: "application#nutrition"
 
   post "charges/:event_id", to: "charges#create", as: "charges"
 
