@@ -66,9 +66,6 @@
                     <a class="navbar-brand" href="#"></a>
                     <ul class="navbar-nav">
                         <%= nav_link "Home", root_path %>
-                        <%= nav_link "Blog", posts_path %>
-                        <%= nav_link "Contact", contact_path  %>
-                        <%= nav_link "About", about_path %>
                         <li class="nav-item dropdown">
                             <a class="nav-link nav-item lead font-weight-bold dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Services
@@ -80,7 +77,10 @@
                                 <%= dropdown_nav_link "Nutrition", nutrition_path %>
                             </div>
                         </li>
+                        <%= nav_link "Contact", contact_path  %>
+                        <%= nav_link "About", about_path %>
                         <%= nav_link "Schedule", calendar_path %>
+                        <%= nav_link "Blog", posts_path %>
                         <%= nav_link "Free Eval", evaluation_path %>
                         <%= nav_link "Store", "https://teamlocker.squadlocker.com/#/lockers/flight-performance" %>
                         <% if user_signed_in? %>
