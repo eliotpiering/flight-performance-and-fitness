@@ -8,8 +8,8 @@ local:
 
 digital_ocean:
   service: S3
-  access_key_id: <%= ENV.fetch("DO_ACCESS_KEY") %>
-  secret_access_key: <%= ENV.fetch("DO_SECRET") %>
+  access_key_id: <%= ENV.fetch("DO_ACCESS_KEY", nil) %>
+  secret_access_key: <%= ENV.fetch("DO_SECRET", nil) %>
   region: nyc3
   bucket: ep-files
   endpoint: "https://nyc3.digitaloceanspaces.com"
@@ -17,8 +17,8 @@ digital_ocean:
 
 digital_ocean_public:
   service: S3
-  access_key_id: <%= ENV.fetch("DO_ACCESS_KEY") %>
-  secret_access_key: <%= ENV.fetch("DO_SECRET") %>
+  access_key_id: <%= ENV.fetch("DO_ACCESS_KEY", nil) %>
+  secret_access_key: <%= ENV.fetch("DO_SECRET", nil) %>
   public: true
   region: nyc3
   bucket: ep-files

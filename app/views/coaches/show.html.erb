@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <p>
+    <strong>Name:</strong>
+    <%= @coach.name %>
+  </p>
+
+  <p>
+    <strong>Bio:</strong>
+    <%= @coach.bio %>
+  </p>
+
+  <p>
+    <strong>Position:</strong>
+    <%= @coach.position %>
+  </p>
+
+  <p>
+    <strong>Headshot:</strong>
+    <%= link_to @coach.headshot.filename, @coach.headshot if @coach.headshot.attached? %>
+  </p>
+</div>
+
+<%= link_to 'Edit', edit_coach_path(@coach) %> |
+<%= link_to 'Back', coaches_path %>

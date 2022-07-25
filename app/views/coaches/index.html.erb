@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <%= link_to 'Add Coach', new_coach_path %>
+  <h1>Coaches</h1>
+
+  <div class="card-deck mb-3 row">
+      <% @coaches.each do |coach| %>
+
+        <%= render partial: "coach", locals: {coach: coach}  %>
+        <%= link_to "DELETE #{coach.name}", coach_path(coach), method: :delete, data: { confirm: "Are you sure your want to delete this record?" }, class: "btn btn-danger"%>
+      <% end %>
+  </div>
+</div>
+
+

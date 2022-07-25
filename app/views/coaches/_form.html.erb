@@ -1,0 +1,37 @@
+<%= form_with(model: coach, local: true) do |form| %>
+  <% if coach.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(coach.errors.count, "error") %> prohibited this coach from being saved:</h2>
+
+      <ul>
+        <% coach.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bio %>
+    <%= form.text_area :bio, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :position %>
+    <%= form.text_field :position, class: "form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :headshot %>
+    <%= form.file_field :headshot, class: "form-control" %>
+  </div>
+
+  <div class="mt-2 actions">
+    <%= form.submit coach.persisted? ? "Edit" : "Create", class: "btn btn-primary" %>
+  </div>
+<% end %>

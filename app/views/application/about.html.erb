@@ -14,11 +14,8 @@
   </div>
 
   <div class="card-deck mb-3 row">
-    <%= render partial: "about_flight_teammate", locals: {name: "Dylan Gutheil", img_name: "Dylan-Headshot-Clean.jpg", credentials: "Credentials: <strong>CSCS, Pn1</strong>", about: "Dylan grew up in Brookline, Massachusetts. Passionate about sports since childhood, Dylan played football and rugby in high school and continued his rugby career at Springfield College, where he earned a degree in Exercise Science. After college, he dedicated himself to the field of strength and conditioning. Dylan has extensive expertise in the science of human movement, exercise physiology, and biomechanics, and he enjoys working with clients of all ages and skill levels."} %>
-    <%= render partial: "about_flight_teammate", locals: {name: "Jared Collinson", img_name: "Jared-Headshot-Clean.jpg", credentials: "Credentials: <strong>CSCS</strong>", about: "Jared grew up in Sandwich, Massachusetts, where he played soccer and football through high school. He started playing rugby at Springfield College, where he earned a degree in Exercise Science. He continues to play rugby at a professional level, competing internationally. Jared’s enthusiasm for fitness and training is matched by his professional experience working in physical therapy clinics, strength and conditioning facilities, and sports clubs."} %>
-  </div>
-
-  <div class="card-deck mb-5 row">
-    <%= render partial: "about_flight_teammate", locals: {name: "Vini", img_name: "Vini-Headshot-Clean.jpg", credentials: nil, about: "Vini grew up in Cambridge, Ma., his journey into athletics began at the age of 4 where he played various sports, 3 or 4 seasons of every year from then on. After finding collegiate rugby at Springfield College in 2009, he decided to dedicate more time to the craft of exercise science and physiology, in order to take rugby to the International level. During this journey he earned a degree in Psychology and became well equipped as a Personal Trainer, working for one of the largest commercial gyms in the Boston area from 2012-2018. He is passionate about sharing knowledge, elite movement and performance, and working with clients of all levels."} %>
+      <% @coaches.each do |coach| %>
+        <%= render partial: "coach", locals: {coach: coach}  %>
+      <% end %>
   </div>
 </div>

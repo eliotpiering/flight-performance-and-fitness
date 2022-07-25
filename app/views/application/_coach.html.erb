@@ -1,0 +1,16 @@
+<div class="col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h4><%= coach.name %></h4>
+    </div>
+    <div class="card-body">
+      <% if coach.headshot.attached? %>
+        <%= image_tag coach.headshot.variant(resize_to_limit: [600, 600]), alt: coach.name, class: "card-img-top img-fluid" %>
+      <% end %>
+      <label class="font-weight-bold"><%= coach.position %></label>
+      <p class="card-text">
+        <%= coach.bio %>
+      </p>
+    </div>
+  </div>
+</div>

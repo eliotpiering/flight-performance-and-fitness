@@ -85,3 +85,6 @@ gem "devise_invitable", "~> 2.0.1"
 gem "ruby-oembed" #, github: "elektronaut/ruby-oembed", ref: "dbf581c796eef15fe9ecff2558756bbfab9c9a91"
 gem "will_paginate", "~> 3.2"
 gem "local_time"
+
+gem "image_processing"
+gem "mini_magick"

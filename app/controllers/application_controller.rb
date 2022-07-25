@@ -38,6 +38,10 @@ class ApplicationController < ActionController::Base
   def internship
   end
 
+  def about
+    @coaches = Coach.all
+  end
+
   private
 
   def robot?
