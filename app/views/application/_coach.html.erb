@@ -12,5 +12,13 @@
         <%= coach.bio %>
       </p>
     </div>
+
+    <% if with_edit_links %>
+      <div class="card-footer text-muted">
+        <%= link_to "Edit #{coach.name}", edit_coach_path(coach) %>
+        <%= link_to "DELETE #{coach.name}", coach_path(coach), method: :delete, data: { confirm: "Are you sure your want to delete this record?" }, class: "text-danger"%>
+      </div>
+    <% end %>
+
   </div>
 </div>

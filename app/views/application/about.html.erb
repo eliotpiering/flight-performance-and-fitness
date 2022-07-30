@@ -15,7 +15,7 @@
 
   <div class="card-deck mb-3 row">
       <% @coaches.each do |coach| %>
-        <%= render partial: "coach", locals: {coach: coach}  %>
+        <%= render partial: "coach", locals: {coach: coach, with_edit_links: false}  %>
       <% end %>
   </div>
 </div>

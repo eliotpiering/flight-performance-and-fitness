@@ -7,8 +7,7 @@
   <div class="card-deck mb-3 row">
       <% @coaches.each do |coach| %>
 
-        <%= render partial: "coach", locals: {coach: coach}  %>
-        <%= link_to "DELETE #{coach.name}", coach_path(coach), method: :delete, data: { confirm: "Are you sure your want to delete this record?" }, class: "btn btn-danger"%>
+        <%= render partial: "coach", locals: {coach: coach, with_edit_links: true}  %>
       <% end %>
   </div>
 </div>
