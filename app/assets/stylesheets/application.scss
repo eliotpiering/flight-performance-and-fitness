@@ -25,33 +25,6 @@ body {
   color: $primary;
 }
 
-#slogan {
-  position: static;
-  padding: 25px;
-
-  h1,
-  h2,
-  a {
-    opacity: 1;
-  }
-
-  a {
-    font-size: 1.5rem;
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  #slogan {
-    position: absolute;
-    top: 210px;
-    left: 10%;
-    padding: 25px;
-    opacity: 0.8;
-    z-index: 20;
-    width: 25%;
-  }
-}
-
 #footer-image {
   background-image: image-url("platform_cropped.jpg");
   background-position: center;
@@ -217,6 +190,25 @@ body {
   background-color: #f8f9fa;
   opacity: 0.8;
   bottom: -0.4em;
+}
+
+// #slogan {
+//   padding-top: 12rem;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+#background-home-page {
+  background-image: image-url("home-page-lead.jpg");
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* width: 100%; */
+  height: 30rem;
+  h1 {
+    padding-top: 9rem;
+  }
 }
 
 #background-remote-programming {
