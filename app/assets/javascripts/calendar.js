@@ -21,7 +21,4 @@ document.addEventListener("turbolinks:load", function() {
       }
 
     });
-
-  //weird hack for the bootstrap calendar
-  // $(".dropdown-toggle").click(); 
 });

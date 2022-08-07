@@ -29,41 +29,23 @@ class Schedule
     when :sunday
       [empty(day, 5, 5), training_session(day, 10, 1.5), empty(day, 11.5, 8.5)]
     when :monday
-      covid_training_day(day)
+      [training_session(day, 5, 1.5), training_session(day, 6.5, 1.5), training_session(day, 8, 2), empty(day, 10, 5.5),
+       training_session(day, 15.5, 1.5), training_session(day, 17, 1.5), conditioning(day, 18.25, 1, overlap: 13), training_session(day, 18.5, 1.5)]
     when :tuesday
-      covid_training_day(day)
+      training_day(day)
     when :wednesday
-      covid_training_day(day)
+      [training_session(day, 5, 1.5), conditioning(day, 6.25, 1, overlap: 1), training_session(day, 6.5, 1.5), training_session(day, 8, 2), empty(day, 10, 5.5),
+       training_session(day, 15.5, 1.5), training_session(day, 17, 1.5), conditioning(day, 18.25, 1, overlap: 13), training_session(day, 18.5, 1.5)]
     when :thursday
-      covid_training_day(day)
+      training_day(day)
     when :friday
-      covid_training_day(day)
+      training_day(day)
     when :saturday
       [empty(day, 5, 3), conditioning(day, 8, 1.5), training_session(day, 9.5, 1.5), training_session(day, 11, 1.5), empty(day, 12.5, 7.5)]
     end
-
-    # Pre COVID schedule
-    # when :monday
-    #   [open_gym(day, 5.5, 4.5), empty(day, 10, 5), open_gym(day, 15, 5)]
-    # when :tuesday
-    #   [open_gym(day, 5.5, 4.5), empty(day, 10, 5), open_gym(day, 15, 5)]
-    # when :wednesday
-    #   [open_gym(day, 5.5, 4.5), empty(day, 10, 5), open_gym(day, 15, 5)]
-    # when :thursday
-    #   [open_gym(day, 5.5, 4.5), empty(day, 10, 5), open_gym(day, 15, 5)]
-    # when  :friday
-    #   [open_gym(day, 5.5, 4.5), empty(day, 10, 5), open_gym(day, 15, 5)]
-    # when :saturday
-    #   [empty(day, 5.5, 1.5), open_gym(day, 7, 5), empty(day, 8.5, 8),]
-    # end
   end
 
-  # -The schedule
-  # Monday -friday  : 5am, 630am, 8-10am, 330pm, 5pm, 630-8pm( All strength and conditioning)
-  # Sat: Group strength and conditioning class at 8am, Normal S&C at 930am, 11am
-  # Sunday: 10am S&C
-
-  def self.covid_training_day(day)
+  def self.training_day(day)
     [training_session(day, 5, 1.5), training_session(day, 6.5, 1.5), training_session(day, 8, 2), empty(day, 10, 5.5),
      training_session(day, 15.5, 1.5), training_session(day, 17, 1.5), training_session(day, 18.5, 1.5)]
   end
@@ -91,7 +73,7 @@ class Schedule
   end
 
   def self.conditioning(date, start_hour, duration = 1, options = {})
-    event("Group Classes", "Small group, boot camp style conditioning class in a fun team environment.", "conditioning", date, start_hour, duration, options)
+    event("Group classes", "Small group, boot camp style conditioning class in a fun team environment.", "conditioning", date, start_hour, duration, options)
   end
 
   def self.personal_training(date, start_hour, duration = 1)
