@@ -1,4 +1,4 @@
-$primary: #01aef0;
+$primary: #004b72;
 // $btn-primary: black;
 // $btn-font-weight: bold;
 
@@ -24,6 +24,12 @@ body {
 .text-blue {
   color: $primary;
 }
+
+.text-lighter-blue {
+  color: #4d809c;
+}
+
+
 
 #footer-image {
   background-image: image-url("platform_cropped.jpg");
