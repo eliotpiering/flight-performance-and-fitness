@@ -4,65 +4,102 @@
             <h1>Services</h1>
         </div>
     </div>
-    <div class="card-deck mb-5">
+    <div class="card-deck mb-0">
         <div class="card">
             <div class="card-body">
-                <img class="card-img-top img-fluid" src="<%= asset_path("strength-and-conditioning.png") %>" alt="Strength & Conditioning">
-                <h4 class="card-title pt-3 pb-3">Strength & Conditioning</h3>
+                <img class="card-img-top img-fluid" src="<%= asset_path("one-on-one.png") %>" alt="Personalized Small Group Training">
+                <h4 class="card-title pt-3 pb-3">Personalized Small Group Training</h4>
                     <p class="card-text text-left">
-                        Strength & Conditioning coaching and programming is the flagship service of Flight. No other gym experience will offer both the extremely individualized programming with an encouraging team atmosphere.
-                        <br/><br/>Flight coaches pride themselves on detail-oriented hands on coaching with a results- driven mindset. Our clients have the flexibility to perform personalized workouts under the close supervision of our diverse coaching staff during open gym hours.
-                        <br/><br/> Sign up for a <%= link_to "free evaluation", evaluation_path, class: "font-weight-bold" %> to get started.
+                        Our personalized small group training option is the flagship service of Flight. Nowhere else can match the combination of individualized programming and instruction, with an encouraging team atmosphere. Flight coaches pride themselves on detail-oriented hands-on coaching with a results-driven mindset.
+                        <br/>
+                        <br/>
+                        With this service, you will have the flexibility to perform your personalized workouts under the close supervision of our diverse coaching staff during our many open time slots throughout the day. If you are someone that is looking for coaching, guidance, and an expert written plan that drives results, then this supportive environment is for you.
                 </p>
             </div>
         </div>
         <div class="card">
             <div class="card-body">
-                <img class="card-img-top img-fluid" src="<%= asset_path("one-on-one.png") %>" alt="Personal Training">
-                <h4 class="card-title pt-3 pb-3">Personal Training</h4>
+                <img class="card-img-top img-fluid" src="<%= asset_path("strength-and-conditioning.png") %>" alt="Sports Performance Training">
+                <h4 class="card-title pt-3 pb-3">Sports Performance Training</h4>
                 <p class="card-text text-left">
-                    Take on your fitness goals with a 1 on 1 coaching experience. You and your coach will come together to create a plan that is catered to your goals. Regardless of what roadblocks you might run into, your coach will be there to guide you through every part of the journey to ensure you get the results you are looking for.
-                    <br/><br/> Sign up for a <%= link_to "free evaluation", evaluation_path, class: "font-weight-bold" %> to get started.
+                    Our sports performance programs are also personalized to the athlete’s specific needs and goals.. Rather than focusing on basic strength and fat loss, our sports performance athletes prioritize their explosiveness, resiliency, sport-specific development, and performance. 
+                    <br/>
+                    <br/>
+                    Each program includes all the qualities that are important to an athlete’s success.
+                    <ul>
+                        <li>Speed</li>
+                        <li>Change of direction</li>
+                        <li>Agility</li>
+                        <li>Power</li>
+                        <li>Strength</li>
+                        <li>Injury prevention</li>
+                    </ul>
                 </p>
             </div>
         </div>
     </div>
-    <div class="card-deck mb-5">
+    <div class="p-4 jumbotron">
+      <p>With these two options, you are getting the personalization of personal training while still being in a group environment with elite coaching and a supportive community of athletes and clients to push you to the next level.</p>
+      <hr class="my-2">
+      <p>
+        <a href="<%= evaluation_path %>" class="btn btn-primary display-1">Sign up for a Free Evaluation</a>
+      </p>
+    </div>
+    <div class="card-deck">
         <div class="card">
             <div class="card-body">
                 <img class="card-img-top img-fluid" src="<%= asset_path("Group-Class-Squat.jpg") %>" alt="Group Classes">
-                <h4 class="card-title pt-3 pb-3">Group Classes</h3>
-                <p class="card-text text-left">Do you find motivation in a larger group? Join us for one of our fun and intense hour long classes. We'll do a variety of strength and cardio exercises.
-                  <br/><br/> Visit our <%= link_to "calendar", calendar_path, class: "font-weight-bold" %> for class times.
+                <h4 class="card-title pt-3 pb-3">Small Group Metabolic Strength and Fitness</h4>
+                <p class="card-text text-left">
+                    If you’re looking for a team environment to motivate and support you, this is the training option for you.
+                    <br/>
+                    <br/>
+                    Our small group fitness classes are a unique mix of weight lifting, bodyweight exercises, plyometrics, and conditioning to maximize building lean muscle and losing fat.
+                    <br/>
+                    <br/>
+                     
+                    What separates our small group fitness from other group classes is the personalized coaching. Each coach will know who you are, what your goals are, and your fitness level so we can maximize results while keeping you feeling good and injury free.  
                 </p>
             </div>
         </div>
 
         <div class="card">
             <div class="card-body">
-                <img class="card-img-top img-fluid" src="<%= asset_path("nutritional-coaching.jpg") %>" alt="Nutritional Coaching">
-                <h4 class="card-title pt-3 pb-3">Nutritional Coaching</h4>
-                <div class="card-text text-left">
-                    Fitness is only one piece of the equation. Proper nutrition is just as important towards reaching your health and fitness goals. Flight offers a 3 month nutrition-coaching program to make sure you have all the tools and knowledge you need to reach your goals.
-                </div>
+                <img class="card-img-top img-fluid" src="<%= asset_path("online-coaching.jpg") %>" alt="Remote Coaching">
+                <h4 class="card-title pt-3 pb-3">All Access Remote Coaching</h4>
+                <p class="card-text text-left">
+                    Can’t make it to flight in person but still want to get expert coaching and programming? Flight offers online coaching for dedicated individuals looking to improve their performance in sports performance, powerlifting, and weightlifting.
+                    <br/><br/> More details on our <%= link_to "remote coaching", remote_coaching_path, class: "font-weight-bold" %> page.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-deck mb-5">
+        <div class="card">
+            <div class="card-body">
+                <img class="card-img-top img-fluid" src="<%= asset_path("squats.jpg") %>" alt="1 on 1 Personal Training">
+                <h4 class="card-title pt-3 pb-3">1 on 1 Personal Training</h4>
+                <p class="card-text text-left">
+                  1 on 1 Personal Training is our most personalized option.  With this option you will have the full attention of a coach for a full hour every time you train. This level of attention guarantees you will get the most out of every session, and don’t waste any time on route to your goals. Regardless of what roadblocks you might run into, your coach will be there to guide you through every part of the journey to ensure you get the results you are looking for.
+                </p>
             </div>
         </div>
 
         <div class="card">
             <div class="card-body">
-                <img class="card-img-top img-fluid" src="<%= asset_path("online-coaching.jpg") %>" alt="Online Coaching">
-                <h4 class="card-title pt-3 pb-3">All Access Remote Coaching</h4>
-                <div class="card-text text-left">
-                    Can’t make it to flight in person but still want to get expert coaching and programming? Flight offers online coaching for dedicated individuals looking to improve their performance in sports performance, powerlifting, and weightlifting.
-                    <br/><br/> More details on our <%= link_to "remote coaching", remote_coaching_path, class: "font-weight-bold" %> page.
-                </div>
+                <img class="card-img-top img-fluid" src="<%= asset_path("nutritional-coaching.jpg") %>" alt="Nutritional Foundations Course">
+                <h4 class="card-title pt-3 pb-3">Nutrition Foundations Course</h4>
+                <p class="card-text text-left">
+                  The goal of this course is to get our members the basic nutrition knowledge needed to really maximize their results and get healthier habits around food.
+                    <br/>
+                    What’s included:
+                    <ul>
+                        <li>Three 20min long videos mapping out the fundamentals of nutrition, including habit forming, goal setting, calorie intake, macronutrient breakdown, workout nutrition, and practical strategies for navigating road blocks.</li>
+                        <li>Three 30min nutrition strategy sessions to get you started and actually implementing a nutrition plan that you feel confident about!</li>
+                    </ul>
+                </p>
             </div>
-        </div>
-    </div>
-
-    <div class="row m-3">
-        <div class="col text-center p-3" >
-                <a href="<%= evaluation_path %>" class="btn btn-primary display-1">Sign up for a Free Evaluation</a>
         </div>
     </div>
 </div>
