@@ -66,17 +66,7 @@
                     <a class="navbar-brand" href="#"></a>
                     <ul class="navbar-nav">
                         <%= nav_link "Home", root_path %>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link nav-item lead font-weight-bold dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Services
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <%= dropdown_nav_link "All Services", services_path  %>
-                                <div class="dropdown-divider"></div>
-                                <%= dropdown_nav_link "Remote Coaching", remote_coaching_path %>
-                                <%= dropdown_nav_link "Nutrition", nutrition_path %>
-                            </div>
-                        </li>
+                        <%= nav_link "Services", services_path %>
                         <%= nav_link "Contact", contact_path  %>
                         <%= nav_link "About", about_path %>
                         <%= nav_link "Schedule", calendar_path %>
