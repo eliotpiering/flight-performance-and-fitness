@@ -32,14 +32,14 @@ body {
 
 
 #footer-image {
-  background-image: image-url("platform_cropped.jpg");
+  background-image: image-url("flight-footer.jpg");
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   /* width: 100%; */
-  height: 20rem;
+  height: 40rem;
 }
 
 #video-player-container {
@@ -201,22 +201,8 @@ body {
   }
 }
 
-#background-remote-programming {
-  background-image: image-url("Workout-Garage-2.jpg");
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  /* width: 100%; */
-  height: 30rem;
-  h1 {
-    padding-top: 9rem;
-  }
-}
-
 #background-remote-coaching {
-  background-image: image-url("Workout-Garage-2.jpg");
+  background-image: image-url("remote-coaching.jpg");
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;

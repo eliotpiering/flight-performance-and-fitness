@@ -20,9 +20,7 @@ Rails.application.routes.draw do
   get "evaluation", to: "application#evaluation"
   post "evaluation", to: "application#submit_evaluation"
   get "privacy", to: "application#privacy"
-  get "in-home-workout", to: "application#coronavirus"
   post "oembed", to: "oembed#create"
-  get "remote_programming", to: "application#remote_programming"
   get "internship", to: "application#internship"
   get "remote_coaching", to: "application#remote_coaching"
 
