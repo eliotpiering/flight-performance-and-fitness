@@ -52,7 +52,9 @@
                 <hr/>
 
                 <div class="row mt-2 mb-2">
-                  <h5 class="w-100">Where, roughly, are you now? (1-poor to 10-excellent)</h5>
+                    <div class="col-12">
+                      <label>Where, roughly, are you now? (1-poor to 10-excellent)</label>
+                    </div>
                     <div class="col">
                       <label>Fitness (1-10)</label>
                       <%= f.number_field "fitness_level", min: 1, max: 10, class: "form-control" %>
@@ -72,10 +74,10 @@
                 </div>
                <div class="row mb-2 mt-2">
                   <div class="col-12 mt-2 mb-2">
-                     <h5>What days and times work for a free introductory workout/evaluation?</h5>
+                     <label>What days and times work for a free introductory workout/evaluation?</label>
                       <%= f.text_area "times_string", class: "form-control", required: true %>
                   </div>
-                  <div >
+               </div>
                   <!-- <div class="col-md-4 col-sm-12">
                        <label>Time 1 *</label>
                        <%= f.text_field "[times][1]", class: "form-control form-control-lg datetimepicker-input", data: {toggle: "datetimepicker", target:"#datetimepicker#{1}"}, id: "datetimepicker#{1}", required: true %>
@@ -90,17 +92,23 @@
                        </div>
                        </div>
                   -->
-                <div class="row email-confirmation">
-                    <div class="col-md-4 col-sm-12">
-                        <label>Email Confirmation</label>
-                        <%= f.text_field "my_unique_email_confirmation", class: "form-control form-control-lg", placeholder: "If you fill this in, this form won't be submitted." %>
-                    </div>
-                </div>
-                <div class="row mt-5 mb-5">
-                    <div class="col text-center">
-                        <%= f.submit "Sign up", class: "btn btn-primary" %>
-                    </div>
-                </div>
+               <div class="row mb-2 mt-2">
+                  <div class="col-12 mt-2 mb-2">
+                     <label>How did you hear about us?</label>
+                      <%= f.text_area "how_did_you_hear_about_us", class: "form-control", required: false %>
+                  </div>
+               </div>
+               <div class="row email-confirmation">
+                 <div class="col-md-4 col-sm-12">
+                   <label>Email Confirmation</label>
+                   <%= f.text_field "my_unique_email_confirmation", class: "form-control form-control-lg", placeholder: "If you fill this in, this form won't be submitted." %>
+                 </div>
+               </div>
+               <div class="row mt-5 mb-5">
+                 <div class="col text-center">
+                   <%= f.submit "Sign up", class: "btn btn-primary" %>
+                 </div>
+               </div>
             <% end %>
     </div>
     </div>
