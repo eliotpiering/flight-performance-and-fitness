@@ -29,7 +29,7 @@ class Schedule
     when :sunday
       [empty(day, 5, 5), training_session(day, 10, 1.5), empty(day, 11.5, 8.5)]
     when :monday
-      [training_session(day, 5, 1.5), training_session(day, 6.5, 1.5), training_session(day, 8, 2), empty(day, 10, 5.5),
+      [training_session(day, 5, 1.5), conditioning(day, 6.25, 1, overlap: 1), training_session(day, 6.5, 1.5), training_session(day, 8, 2), empty(day, 10, 5.5),
        training_session(day, 15.5, 1.5), training_session(day, 17, 1.5), conditioning(day, 18.25, 1, overlap: 13), training_session(day, 18.5, 1.5)]
     when :tuesday
       training_day(day)
@@ -39,7 +39,8 @@ class Schedule
     when :thursday
       training_day(day)
     when :friday
-      training_day(day)
+      [training_session(day, 5, 1.5), conditioning(day, 6.25, 1, overlap: 1), training_session(day, 6.5, 1.5), training_session(day, 8, 2), empty(day, 10, 5.5),
+       training_session(day, 15.5, 1.5), training_session(day, 17, 1.5), conditioning(day, 18.25, 1, overlap: 13), training_session(day, 18.5, 1.5)]
     when :saturday
       [empty(day, 5, 3), conditioning(day, 8, 1.5), training_session(day, 9.5, 1.5), training_session(day, 11, 1.5), empty(day, 12.5, 7.5)]
     end
