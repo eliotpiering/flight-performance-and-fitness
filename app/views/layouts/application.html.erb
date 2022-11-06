@@ -71,7 +71,7 @@
                         <%= nav_link "About", about_path %>
                         <%= nav_link "Schedule", calendar_path %>
                         <%#= nav_link "Blog", posts_path %>
-                        <%= nav_link "Free Eval", evaluation_path %>
+                        <%= nav_link "Free Intro Session", evaluation_path %>
                         <%= nav_link "Store", "https://www.etsy.com/shop/FlightPerformance?ref=shop_sugg" %>
                         <% if user_signed_in? %>
                             <%= nav_link "Log Out", destroy_user_session_path, method: :delete, id: "user-logged-in" %>
@@ -131,7 +131,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header text-center">
-                            <h5 class="modal-title">Free Evaluation</h5>
+                            <h5 class="modal-title">Free Intro Session</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <sp aria-hidden="true">&times;</span>
                             </button>
@@ -142,7 +142,7 @@
                             <p class="lead">To achieve the results you want, our coaches will create a specialized program tailored to you. In order to do this, we ask you come in for a free one on one evaluation. No obligations, just come in for a 1 hour workout and you can see what we are all about.</p>
                             <br>
                             <a href="<%= evaluation_path %>">
-                                <button class="btn btn-primary">Sign up today for your free evaluation</button>
+                                <button class="btn btn-primary">Sign up today for your free into session</button>
                             </a>
                         </div>
                     </div>
