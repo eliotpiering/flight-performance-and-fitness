@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get "services", to: "application#services"
   get "contact", to: "application#contact"
   post "contact", to: "application#submit_contact"
-  get "testimonials", to: "application#testimonials"
+  get "testimonials", to: "application#video_testimonials"
   get "events", to: "application#events"
   get "calendar", to: "application#calendar"
   get "evaluation", to: "application#evaluation"
