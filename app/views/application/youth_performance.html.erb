@@ -1,0 +1,86 @@
+<div class="container">
+  <div class="row text-center mt-5 mb-5" id="background-youth-program">
+      <div class="col">
+        <h1 class="display-4">Youth Performance Program</h1>
+      </div>
+  </div>
+  <div class="row pb-2 pt-2">
+    <div class="alert alert-info alert w-100" role="alert">
+      <p>Spring session starts April 1st.  We will only be accepting 35 athletes into the program, and it usually sells out before it starts. </br>Register in the <a href="#youth-performance-form">form below.</a></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <h3>Parents, this program is for your kid if:</h3>
+      <ul class="">
+        <li class="p-2">They are looking to get faster stronger to improve in their sport.</li>
+        <li class="p-2">They are looking to play sports at higher levels of competition.</li>
+        <li class="p-2">They have a hard time eating healthy and you need someone else in your corner to promote healthy habits.</li>
+        <li class="p-2">They struggle with self-confidence.</li>
+      </ul>
+      <h3>Here is what you can expect from this program:</h3>
+      <ul class="">
+        <li class="p-2">Your kids will get stronger and can perform better than ever.</li>
+        <li class="p-2">Your kids will improve speed, agility, and blow the doors off the competition.</li>
+        <li class="p-2">Your kids will gain coordination and the ability to acquire new skills faster.</li>
+        <li class="p-2">Your children will want to eat better so they can perform better in the gym and in their sport.</li>
+        <li class="p-2">Their confidence will skyrocket, and they will learn to be leaders and speak up when they need to.</li>
+      </ul>
+    </div>
+  </div>
+  <hr/>
+  <section class="row mt-5" id="youth-performance-form">
+    <div class="col-sm-12">
+      <h3>Register for Youth Performance</h3>
+      <%= form_with url: youth_performance_path do |f|%>
+        <div class="row mb-2 mt-2">
+          <div class="col-md-6 col-sm-12">
+            <label>Your Name *</label>
+            <%= f.text_field "name", class: "form-control form-control-lg", required: true %>
+          </div>
+
+          <div class="col-md-6 col-sm-12">
+            <label>Email *</label>
+            <%= f.email_field "email", class: "form-control form-control-lg", required: true %>
+          </div>
+        </div>
+
+        <div class="row mb-2 mt-2">
+          <div class="col-md-6 col-sm-12">
+            <label>Number of kids *</label>
+            <%= f.text_field "number_of_kids", class: "form-control form-control-lg", required: true %>
+          </div>
+
+          <div class="col-md-6 col-sm-12">
+            <label>Age of kids *</label>
+            <%= f.text_field "age_of_kids", class: "form-control form-control-lg", required: true %>
+          </div>
+        </div>
+
+        <div class="row mt-2 mb-2">
+          <div class="col-md-6 col-sm-12">
+            <label>Name of kids *</label>
+            <%= f.text_field "name_of_kids", class: "form-control form-control-lg", required: true %>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <label>Sports they play *</label>
+            <%= f.text_field "sport_of_kids", class: "form-control form-control-lg", required: true %>
+          </div>
+        </div>
+
+        <div class="row email-confirmation">
+           <div class="col-md-4 col-sm-12">
+             <label>Email Confirmation</label>
+             <%= f.text_field "my_unique_email_confirmation", class: "form-control form-control-lg", placeholder: "If you fill this in, this form won't be submitted." %>
+           </div>
+         </div>
+        <div class="row mt-5 mb-5">
+          <div class="col">
+            <%= f.submit "Submit Registration", class: "btn btn-primary" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </section>
+</div>

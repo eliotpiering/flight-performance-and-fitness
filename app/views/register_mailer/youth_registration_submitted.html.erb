@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+      <p><%= @params[:name] %> signed up for youth registration.</p>
+      <%= @params.each do |k, v| %>
+        <p><%= k.to_s.humanize %>: <%= v %></p>
+      <% end %>
+  </body>
+</html>

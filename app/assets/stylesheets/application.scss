@@ -219,6 +219,21 @@ body {
   }
 }
 
+
+#background-youth-program {
+  background-image: image-url("youth-performance-program-background.jpeg");
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* width: 100%; */
+  height: 50rem;
+  h1 {
+    padding-top: 10rem;
+  }
+}
+
 .remote-programming-deck {
   ul {
     padding-left: 1rem;

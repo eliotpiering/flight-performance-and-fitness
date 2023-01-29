@@ -1,0 +1,9 @@
+var registerForm = $("#youth-performance-form");
+
+registerForm.html(
+  "<div class='row mt-5 mb-5'><div class='col text-center'><h2>Thanks! A Flight coach wil be reaching out with more details soon.</h2></div></div>"
+);
+
+$('html, body').animate({
+  scrollTop: registerForm.offset().top
+}, 1000);

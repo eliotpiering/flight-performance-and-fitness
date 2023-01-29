@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   post "oembed", to: "oembed#create"
   get "internship", to: "application#internship"
   get "remote_coaching", to: "application#remote_coaching"
+  get "youth_performance", to: "application#youth_performance"
+  post "youth_performance", to: "application#submit_youth_performance_registration"
 
   post "charges/:event_id", to: "charges#create", as: "charges"
 

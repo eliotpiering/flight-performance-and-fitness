@@ -29,6 +29,15 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def submit_youth_performance_registration
+    if robot?
+      logger.warn "NEW SPAMMER: #{youth_performance_params.slice(:name, :email).to_json}"
+    else
+      RegisterMailer.youth_registration_confirm(youth_performance_params).deliver_now
+      RegisterMailer.youth_registration_submitted(youth_performance_params).deliver_now
+    end
+  end
+
   def privacy
   end
 
@@ -50,6 +59,10 @@ class ApplicationController < ActionController::Base
 
   def register_params
     params.permit(:name, :email, :why_flight, :goals, :experience, :age, :injury_history, :how_did_you_hear_about_us, :times_string, :stress_level, :fitness_level, :sleep_level, :nutritional_level, times: {})
+  end
+
+  def youth_performance_params
+    params.permit(:name, :email, :number_of_kids, :age_of_kids, :name_of_kids, :sport_of_kids)
   end
 
   def contact_params

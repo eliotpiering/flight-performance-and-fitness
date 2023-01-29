@@ -21,4 +21,16 @@ class RegisterMailer < ApplicationMailer
     @name = params[:name]
     mail(from: "flightperformanceandfitness@gmail.com", to: email, subject: "Flight Performance Free Intro Session")
   end
+
+  def youth_registration_submitted(params)
+    email = params[:email]
+    @params = params
+    mail(from: email, to: "flightperformanceandfitness@gmail.com", subject: "Youth Performance Sign up")
+  end
+
+  def youth_registration_confirm(params)
+    email = params[:email]
+    @name = params[:name]
+    mail(from: "flightperformanceandfitness@gmail.com", to: email, subject: "Flight Performance Youth Performance Registration")
+  end
 end
