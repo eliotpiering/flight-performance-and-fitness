@@ -117,6 +117,7 @@ $(document).ready(function () {
               currentPage !== "/privacy" &&
               currentPage !== "/remote_coaching" &&
               currentPage !== "/internship" &&
+              currentPage !== "/youth_performance" &&
               getTimesShownPerPage() < MAX_TIMES_SHOWN_PER_PAGE &&
               getTimesShownPerSession() < MAX_TIMES_SHOWN_PER_SESSION &&
               $("#user-logged-in").length === 0;
