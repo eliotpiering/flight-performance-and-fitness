@@ -62,7 +62,7 @@ class ApplicationController < ActionController::Base
   end
 
   def youth_performance_params
-    params.permit(:name, :email, :number_of_kids, :age_of_kids, :name_of_kids, :sport_of_kids)
+    params.permit(:name, :email, :phone, :number_of_kids, :age_of_kids, :name_of_kids, :sport_of_kids)
   end
 
   def contact_params

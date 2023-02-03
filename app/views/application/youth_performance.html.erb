@@ -35,14 +35,19 @@
       <h3>Register for Youth Performance</h3>
       <%= form_with url: youth_performance_path do |f|%>
         <div class="row mb-2 mt-2">
-          <div class="col-md-6 col-sm-12">
+          <div class="col-md-4 col-sm-12">
             <label>Your Name *</label>
             <%= f.text_field "name", class: "form-control form-control-lg", required: true %>
           </div>
 
-          <div class="col-md-6 col-sm-12">
+          <div class="col-md-4 col-sm-12">
             <label>Email *</label>
             <%= f.email_field "email", class: "form-control form-control-lg", required: true %>
+          </div>
+
+          <div class="col-md-4 col-sm-12">
+            <label>Phone *</label>
+            <%= f.text_field "phone", class: "form-control form-control-lg", required: true %>
           </div>
         </div>
 
