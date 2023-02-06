@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get "remote_coaching", to: "application#remote_coaching"
   get "youth_performance", to: "application#youth_performance"
   post "youth_performance", to: "application#submit_youth_performance_registration"
+  get "group_classes", to: "application#group_classes"
 
   post "charges/:event_id", to: "charges#create", as: "charges"
 
