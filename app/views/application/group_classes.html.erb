@@ -1,12 +1,15 @@
 <div class="container">
-  <div class="row text-center mt-5 mb-5">
+  <div class="row text-center mt-5">
       <div class="col">
         <%= image_tag asset_path("group-classes-background.jpg"), class: "img img-fluid", alt: "Group Class" %>
         <h1 class="display-4">Small Group Metabolic Strength and Fitness</h1>
+        <p class="p-5 lead text-left">Personalized coaching in a gruop workout environment. Each coach will know who you are, what your goals are, and your fitness level so we can maximize results while keeping you feeling good and injury free.</p>
       </div>
   </div>
+</div>
+<div class="container-fluid bg-primary text-white py-5">
   <div class="row">
-    <div class="col">
+    <div class="col offset-lg-2">
       <h3>This program is for you if:</h3>
       <ul class="">
         <li class="p-2">You want to build muscle and lose fat.</li>
@@ -23,7 +26,9 @@
       </ul>
     </div>
   </div>
-  <hr/>
+</div>
+<hr/>
+<div class="container">
   <div class="row mb-5 mx-auto">
     <div class="col text-center">
       <a href="<%= evaluation_path %>" class="btn btn-primary display-1">Sign up today for a Free Intro Session</a>
