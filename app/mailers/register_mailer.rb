@@ -13,7 +13,7 @@ class RegisterMailer < ApplicationMailer
     @stress_level = params[:stress_level]
     @sleep_level = params[:sleep_level]
     @nutritional_level = params[:nutritional_level]
-    mail(from: @email, to: "flightperformanceandfitness@gmail.com", subject: "Free Intro Session Sign up")
+    mail(to: "flightperformanceandfitness@gmail.com", subject: "Free Intro Session Sign up")
   end
 
   def confirm(params)
@@ -25,7 +25,7 @@ class RegisterMailer < ApplicationMailer
   def youth_registration_submitted(params)
     email = params[:email]
     @params = params
-    mail(from: email, to: "flightperformanceandfitness@gmail.com", subject: "Youth Performance Sign up")
+    mail(to: "flightperformanceandfitness@gmail.com", subject: "Youth Performance Sign up")
   end
 
   def youth_registration_confirm(params)
