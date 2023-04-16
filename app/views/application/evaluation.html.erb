@@ -10,106 +10,23 @@
     </div>
     <div class="row">
         <div class="offset-md-2 col-md-8 col-sm-12">
-            <%= form_with url: evaluation_path, id: 'register-form' do |f|%>
-                <div class="row mb-2 mt-2">
-                    <div class="col-md-4 col-sm-12">
-                        <label>Name *</label>
-                        <%= f.text_field "name", class: "form-control form-control-lg", required: true %>
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-                    <label>Email *</label>
-                    <%= f.email_field "email", class: "form-control form-control-lg", required: true %>
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-                        <label>Age</label>
-                        <%= f.number_field "age", class: "form-control form-control-lg", required: false %>
-                    </div>
-                </div>
-                <div class="row mt-2 mb-2">
-                    <div class="col">
-                        <label>What are you looking to get out of flight? *</label>
-                        <%= f.text_area "why_flight", class: "form-control", required: true %>
-                    </div>
-                </div>
-                <div class="row mt-2 mb-2">
-                    <div class="col">
-                        <label>Overall Goals?</label>
-                        <%= f.text_area "goals", class: "form-control", required: false %>
-                    </div>
-                </div>
-                <div class="row mt-2 mb-2">
-                    <div class="col">
-                        <label>Previous Training or Athletics experience?</label>
-                        <%= f.text_area "experience", class: "form-control" %>
-                    </div>
-                </div>
-                <div class="row mt-2 mb-2">
-                    <div class="col">
-                        <label>Past Injury History</label>
-                        <%= f.text_area "injury_history", class: "form-control" %>
-                    </div>
-                </div>
-                <hr/>
-
-                <div class="row mt-2 mb-2">
-                    <div class="col-12">
-                      <label>Where, roughly, are you now? (1-poor to 10-excellent)</label>
-                    </div>
-                    <div class="col">
-                      <label>Fitness (1-10)</label>
-                      <%= f.number_field "fitness_level", min: 1, max: 10, class: "form-control" %>
-                    </div>
-                    <div class="col">
-                      <label>Stress (1-10)</label>
-                      <%= f.number_field "stress_level", min: 1, max: 10, class: "form-control" %>
-                    </div>
-                     <div class="col">
-                      <label>Sleep (1-10)</label>
-                      <%= f.number_field "sleep_level", min: 1, max: 10, class: "form-control" %>
-                    </div>
-                     <div class="col">
-                      <label>Nutritional (1-10)</label>
-                      <%= f.number_field "nutritional_level", min: 1, max: 10, class: "form-control" %>
-                    </div>
-                </div>
-               <div class="row mb-2 mt-2">
-                  <div class="col-12 mt-2 mb-2">
-                     <label>What days and times work for a free introductory workout/evaluation?</label>
-                      <%= f.text_area "times_string", class: "form-control", required: true %>
-                  </div>
-               </div>
-                  <!-- <div class="col-md-4 col-sm-12">
-                       <label>Time 1 *</label>
-                       <%= f.text_field "[times][1]", class: "form-control form-control-lg datetimepicker-input", data: {toggle: "datetimepicker", target:"#datetimepicker#{1}"}, id: "datetimepicker#{1}", required: true %>
-                       </div>
-                       <div class="col-md-4 col-sm-12">
-                       <label>Time 2 *</label>
-                       <%= f.text_field "[times][2]", class: "form-control form-control-lg datetimepicker-input", data: {toggle: "datetimepicker", target:"#datetimepicker#{2}"}, id: "datetimepicker#{2}", required: true %>
-                       </div>
-                       <div class="col-md-4 col-sm-12">
-                       <label>Time 3</label>
-                       <%= f.text_field "[times][3]", class: "form-control form-control-lg datetimepicker-input", data: {toggle: "datetimepicker", target:"#datetimepicker#{3}"}, id: "datetimepicker#{3}", required: false %>
-                       </div>
-                       </div>
-                  -->
-               <div class="row mb-2 mt-2">
-                  <div class="col-12 mt-2 mb-2">
-                     <label>How did you hear about us?</label>
-                      <%= f.text_area "how_did_you_hear_about_us", class: "form-control", required: false %>
-                  </div>
-               </div>
-               <div class="row email-confirmation">
-                 <div class="col-md-4 col-sm-12">
-                   <label>Email Confirmation</label>
-                   <%= f.text_field "my_unique_email_confirmation", class: "form-control form-control-lg", placeholder: "If you fill this in, this form won't be submitted." %>
-                 </div>
-               </div>
-               <div class="row mt-5 mb-5">
-                 <div class="col text-center">
-                   <%= f.submit "Sign up", class: "btn btn-primary" %>
-                 </div>
-               </div>
-            <% end %>
-    </div>
+            <iframe
+                    src="https://fitsndr.com/widget/form/h57QR3mydoQgqs97iyFM"
+                    style="width:100%;height:100%;border:none;border-radius:4px"
+                    id="inline-h57QR3mydoQgqs97iyFM"
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="Website Opt-in"
+                    data-height="892"
+                    data-layout-iframe-id="inline-h57QR3mydoQgqs97iyFM"
+                    data-form-id="h57QR3mydoQgqs97iyFM"
+                >
+            </iframe>
+        </div>
     </div>
 </div>
